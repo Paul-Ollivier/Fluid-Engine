@@ -1,26 +1,18 @@
 //
 //  ContentView.swift
-//  Fluid Engine
+//  vox.Force
 //
-//  Created by Paul Ollivier on 02/09/2022.
+//  Created by Feng Yang on 2020/7/23.
+//  Copyright © 2020 Feng Yang. All rights reserved.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    let renderer = Renderer()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        MetalKitView(view: renderer)
+            .frame(minWidth: 640, minHeight: 320)
     }
 }

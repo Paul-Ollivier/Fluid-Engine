@@ -7,18 +7,775 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E2638DDB28C2071400E9D8C5 /* Fluid_EngineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DDA28C2071400E9D8C5 /* Fluid_EngineApp.swift */; };
+		E26062B328C397D0000DDBEB /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = E26062B028C395FD000DDBEB /* fire.png */; };
+		E26062B428C397D5000DDBEB /* snowflake.png in Resources */ = {isa = PBXBuildFile; fileRef = E26062AF28C395FD000DDBEB /* snowflake.png */; };
+		E26062B528C397D9000DDBEB /* bunny.obj in Resources */ = {isa = PBXBuildFile; fileRef = E26062AC28C395FD000DDBEB /* bunny.obj */; };
+		E26062B628C397D9000DDBEB /* cube.obj in Resources */ = {isa = PBXBuildFile; fileRef = E26062B228C395FD000DDBEB /* cube.obj */; };
+		E26062B728C397D9000DDBEB /* cup.obj in Resources */ = {isa = PBXBuildFile; fileRef = E26062AD28C395FD000DDBEB /* cup.obj */; };
+		E26062B828C397D9000DDBEB /* kCubeTriMesh3x3x3As.obj in Resources */ = {isa = PBXBuildFile; fileRef = E26062AB28C395FD000DDBEB /* kCubeTriMesh3x3x3As.obj */; };
+		E26062B928C397D9000DDBEB /* kSphereTriMesh5x5.obj in Resources */ = {isa = PBXBuildFile; fileRef = E26062B128C395FD000DDBEB /* kSphereTriMesh5x5.obj */; };
 		E2638DDD28C2071400E9D8C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DDC28C2071400E9D8C5 /* ContentView.swift */; };
 		E2638DDF28C2071500E9D8C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2638DDE28C2071500E9D8C5 /* Assets.xcassets */; };
 		E2638DE228C2071500E9D8C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2638DE128C2071500E9D8C5 /* Preview Assets.xcassets */; };
+		E2638F6228C207B500E9D8C5 /* nearest_neighbor_query_engine2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DEA28C2078500E9D8C5 /* nearest_neighbor_query_engine2.swift */; };
+		E2638F6328C207B500E9D8C5 /* matrix3x3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DEB28C2078500E9D8C5 /* matrix3x3.swift */; };
+		E2638F6428C207B500E9D8C5 /* face_centered_grid3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638DEC28C2078500E9D8C5 /* face_centered_grid3.metal */; };
+		E2638F6528C207B500E9D8C5 /* pci_sph_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DED28C2078500E9D8C5 /* pci_sph_solver2.swift */; };
+		E2638F6628C207B500E9D8C5 /* sph_kernels3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DEE28C2078500E9D8C5 /* sph_kernels3.swift */; };
+		E2638F6728C207B500E9D8C5 /* surface_to_implicit2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DEF28C2078500E9D8C5 /* surface_to_implicit2.swift */; };
+		E2638F6828C207B500E9D8C5 /* scalar_grid2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DF028C2078600E9D8C5 /* scalar_grid2.swift */; };
+		E2638F6928C207B500E9D8C5 /* array_utils.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638DF128C2078600E9D8C5 /* array_utils.metal */; };
+		E2638F6A28C207B500E9D8C5 /* grid_boundary_condition_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DF228C2078600E9D8C5 /* grid_boundary_condition_solver3.swift */; };
+		E2638F6B28C207B500E9D8C5 /* particle_system_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DF328C2078600E9D8C5 /* particle_system_solver2.swift */; };
+		E2638F6C28C207B500E9D8C5 /* flip_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638DF428C2078600E9D8C5 /* flip_solver2.metal */; };
+		E2638F6D28C207B500E9D8C5 /* iterative_level_set_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DF528C2078600E9D8C5 /* iterative_level_set_solver3.swift */; };
+		E2638F6E28C207B500E9D8C5 /* upwind_level_set_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DF628C2078600E9D8C5 /* upwind_level_set_solver2.swift */; };
+		E2638F6F28C207B500E9D8C5 /* RayMarching.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DF728C2078600E9D8C5 /* RayMarching.swift */; };
+		E2638F7028C207B500E9D8C5 /* array_accessor1.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638DF828C2078700E9D8C5 /* array_accessor1.metal */; };
+		E2638F7128C207B500E9D8C5 /* size2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DF928C2078700E9D8C5 /* size2.swift */; };
+		E2638F7228C207B500E9D8C5 /* grid_fluid_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DFA28C2078700E9D8C5 /* grid_fluid_solver3.swift */; };
+		E2638F7328C207B500E9D8C5 /* constant_vector_field2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DFB28C2078700E9D8C5 /* constant_vector_field2.swift */; };
+		E2638F7428C207B500E9D8C5 /* vector_field2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DFC28C2078700E9D8C5 /* vector_field2.swift */; };
+		E2638F7528C207B500E9D8C5 /* transform2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DFD28C2078700E9D8C5 /* transform2.swift */; };
+		E2638F7628C207B500E9D8C5 /* grid_emitter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DFE28C2078700E9D8C5 /* grid_emitter2.swift */; };
+		E2638F7728C207B500E9D8C5 /* fdm_linear_system_solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638DFF28C2078700E9D8C5 /* fdm_linear_system_solver.swift */; };
+		E2638F7828C207B500E9D8C5 /* grid_fractional_boundary_condition_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0028C2078700E9D8C5 /* grid_fractional_boundary_condition_solver2.swift */; };
+		E2638F7928C207B500E9D8C5 /* grid_point_generator3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0128C2078800E9D8C5 /* grid_point_generator3.swift */; };
+		E2638F7A28C207B500E9D8C5 /* intersection_query_engine3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0228C2078800E9D8C5 /* intersection_query_engine3.swift */; };
+		E2638F7B28C207B500E9D8C5 /* array_accessor.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0328C2078800E9D8C5 /* array_accessor.metal */; };
+		E2638F7C28C207B500E9D8C5 /* fmm_level_set_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0428C2078800E9D8C5 /* fmm_level_set_solver2.swift */; };
+		E2638F7D28C207B500E9D8C5 /* pic_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0528C2078800E9D8C5 /* pic_solver3.metal */; };
+		E2638F7E28C207B500E9D8C5 /* point3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0628C2078800E9D8C5 /* point3.swift */; };
+		E2638F7F28C207B500E9D8C5 /* quadtree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0728C2078800E9D8C5 /* quadtree.swift */; };
+		E2638F8028C207B500E9D8C5 /* physics_helpers.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0828C2078800E9D8C5 /* physics_helpers.metal */; };
+		E2638F8128C207B500E9D8C5 /* fdm_gauss_seidel_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0928C2078800E9D8C5 /* fdm_gauss_seidel_solver3.swift */; };
+		E2638F8228C207B500E9D8C5 /* ray3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0A28C2078800E9D8C5 /* ray3.swift */; };
+		E2638F8328C207B500E9D8C5 /* RayMarching.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0B28C2078900E9D8C5 /* RayMarching.metal */; };
+		E2638F8428C207B500E9D8C5 /* scalar_field2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0C28C2078900E9D8C5 /* scalar_field2.swift */; };
+		E2638F8528C207B500E9D8C5 /* grid_system_data2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0D28C2078900E9D8C5 /* grid_system_data2.swift */; };
+		E2638F8628C207B500E9D8C5 /* sph_kernels_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0E28C2078900E9D8C5 /* sph_kernels_render.swift */; };
+		E2638F8728C207B500E9D8C5 /* array_samplers1.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E0F28C2078900E9D8C5 /* array_samplers1.metal */; };
+		E2638F8828C207B500E9D8C5 /* surface_set2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1028C2078900E9D8C5 /* surface_set2.swift */; };
+		E2638F8928C207B500E9D8C5 /* vertex_centered_scalar_grid2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1128C2078900E9D8C5 /* vertex_centered_scalar_grid2.metal */; };
+		E2638F8A28C207B500E9D8C5 /* vertex_centered_scalar_grid3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1228C2078900E9D8C5 /* vertex_centered_scalar_grid3.swift */; };
+		E2638F8B28C207B500E9D8C5 /* particle_emitter_set2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1328C2078900E9D8C5 /* particle_emitter_set2.swift */; };
+		E2638F8C28C207B500E9D8C5 /* level_set_liquid_solver2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1428C2078900E9D8C5 /* level_set_liquid_solver2_render.swift */; };
+		E2638F8D28C207B500E9D8C5 /* FluidEngineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1528C2078A00E9D8C5 /* FluidEngineApp.swift */; };
+		E2638F8E28C207B500E9D8C5 /* kdtree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1628C2078A00E9D8C5 /* kdtree.swift */; };
+		E2638F8F28C207B500E9D8C5 /* particle_system_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1728C2078A00E9D8C5 /* particle_system_solver3.swift */; };
+		E2638F9028C207B500E9D8C5 /* level_set_utils.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1828C2078A00E9D8C5 /* level_set_utils.metal */; };
+		E2638F9128C207B500E9D8C5 /* fdm_cg_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1928C2078A00E9D8C5 /* fdm_cg_solver3.swift */; };
+		E2638F9228C207B500E9D8C5 /* pci_sph_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1A28C2078A00E9D8C5 /* pci_sph_solver2.metal */; };
+		E2638F9328C207B500E9D8C5 /* physics_helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1B28C2078A00E9D8C5 /* physics_helpers.swift */; };
+		E2638F9428C207B500E9D8C5 /* svd.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1C28C2078A00E9D8C5 /* svd.swift */; };
+		E2638F9528C207B500E9D8C5 /* implicit_surface2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1D28C2078A00E9D8C5 /* implicit_surface2.swift */; };
+		E2638F9628C207B500E9D8C5 /* cubic_semi_lagrangian3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1E28C2078A00E9D8C5 /* cubic_semi_lagrangian3.swift */; };
+		E2638F9728C207B500E9D8C5 /* cg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E1F28C2078B00E9D8C5 /* cg.swift */; };
+		E2638F9828C207B500E9D8C5 /* sph_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2028C2078B00E9D8C5 /* sph_solver2.metal */; };
+		E2638F9928C207B500E9D8C5 /* level_set_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2128C2078B00E9D8C5 /* level_set_solver3.swift */; };
+		E2638F9A28C207B500E9D8C5 /* grid_fractional_single_phase_pressure_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2228C2078B00E9D8C5 /* grid_fractional_single_phase_pressure_solver2.swift */; };
+		E2638F9B28C207B500E9D8C5 /* advection_solvers_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2328C2078B00E9D8C5 /* advection_solvers_render.swift */; };
+		E2638F9C28C207B500E9D8C5 /* vector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2428C2078B00E9D8C5 /* vector2.swift */; };
+		E2638F9D28C207B500E9D8C5 /* fdm_jacobi_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2528C2078B00E9D8C5 /* fdm_jacobi_solver3.swift */; };
+		E2638F9E28C207B500E9D8C5 /* stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2628C2078B00E9D8C5 /* stack.swift */; };
+		E2638F9F28C207B500E9D8C5 /* fdm_utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2728C2078C00E9D8C5 /* fdm_utils.swift */; };
+		E2638FA028C207B500E9D8C5 /* particle_system_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2828C2078C00E9D8C5 /* particle_system_solver2.metal */; };
+		E2638FA128C207B500E9D8C5 /* advection_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2928C2078C00E9D8C5 /* advection_solver2.swift */; };
+		E2638FA228C207B500E9D8C5 /* grid_smoke_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2A28C2078C00E9D8C5 /* grid_smoke_solver3.swift */; };
+		E2638FA328C207B500E9D8C5 /* constant_scalar_field3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2B28C2078C00E9D8C5 /* constant_scalar_field3.swift */; };
+		E2638FA428C207B500E9D8C5 /* particle_system_solver3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2C28C2078C00E9D8C5 /* particle_system_solver3_render.swift */; };
+		E2638FA528C207B500E9D8C5 /* physics_animation_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2D28C2078C00E9D8C5 /* physics_animation_render.swift */; };
+		E2638FA628C207B500E9D8C5 /* fdm_linear_system2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2E28C2078C00E9D8C5 /* fdm_linear_system2.metal */; };
+		E2638FA728C207B500E9D8C5 /* sph_points_to_implicit2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E2F28C2078C00E9D8C5 /* sph_points_to_implicit2.swift */; };
+		E2638FA828C207B500E9D8C5 /* sph_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3028C2078C00E9D8C5 /* sph_solver3.metal */; };
+		E2638FA928C207B500E9D8C5 /* surface3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3128C2078C00E9D8C5 /* surface3.swift */; };
+		E2638FAA28C207B500E9D8C5 /* cell_centered_scalar_grid3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3228C2078D00E9D8C5 /* cell_centered_scalar_grid3.metal */; };
+		E2638FAB28C207B500E9D8C5 /* grid_fluid_solver_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3328C2078D00E9D8C5 /* grid_fluid_solver_render.swift */; };
+		E2638FAC28C207B500E9D8C5 /* array3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3428C2078D00E9D8C5 /* array3.swift */; };
+		E2638FAD28C207B500E9D8C5 /* array_samplers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3528C2078D00E9D8C5 /* array_samplers2.swift */; };
+		E2638FAE28C207B500E9D8C5 /* triangle_mesh3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3628C2078D00E9D8C5 /* triangle_mesh3_render.swift */; };
+		E2638FAF28C207B500E9D8C5 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3728C2078D00E9D8C5 /* Renderable.swift */; };
+		E2638FB028C207B500E9D8C5 /* apic_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3828C2078D00E9D8C5 /* apic_solver3.swift */; };
+		E2638FB128C207B500E9D8C5 /* zhu_bridson_points_to_implicit3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3928C2078D00E9D8C5 /* zhu_bridson_points_to_implicit3.swift */; };
+		E2638FB228C207B500E9D8C5 /* vertex_centered_vector_grid3_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3A28C2078D00E9D8C5 /* vertex_centered_vector_grid3_impl.metal */; };
+		E2638FB328C207B500E9D8C5 /* volume_grid_emitter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3B28C2078E00E9D8C5 /* volume_grid_emitter2.swift */; };
+		E2638FB428C207B500E9D8C5 /* custom_scalar_field3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3C28C2078E00E9D8C5 /* custom_scalar_field3.swift */; };
+		E2638FB528C207B500E9D8C5 /* grid_smoke_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3D28C2078E00E9D8C5 /* grid_smoke_solver3.metal */; };
+		E2638FB628C207B500E9D8C5 /* intersection_query_engine2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3E28C2078E00E9D8C5 /* intersection_query_engine2.swift */; };
+		E2638FB728C207B500E9D8C5 /* matrix4x4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E3F28C2078E00E9D8C5 /* matrix4x4.swift */; };
+		E2638FB828C207B500E9D8C5 /* sph_system_data2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4028C2078E00E9D8C5 /* sph_system_data2_render.swift */; };
+		E2638FB928C207B500E9D8C5 /* parallel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4128C2078E00E9D8C5 /* parallel.swift */; };
+		E2638FBA28C207B500E9D8C5 /* point_simple_list_searcher3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4228C2078E00E9D8C5 /* point_simple_list_searcher3.swift */; };
+		E2638FBB28C207B500E9D8C5 /* cell_centered_scalar_grid2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4328C2078E00E9D8C5 /* cell_centered_scalar_grid2.swift */; };
+		E2638FBC28C207B500E9D8C5 /* fmm_level_set_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4428C2078E00E9D8C5 /* fmm_level_set_solver3.swift */; };
+		E2638FBD28C207B500E9D8C5 /* point_hash_grid_searcher3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4528C2078E00E9D8C5 /* point_hash_grid_searcher3.swift */; };
+		E2638FBE28C207B500E9D8C5 /* pci_sph_solver2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4628C2078F00E9D8C5 /* pci_sph_solver2_render.swift */; };
+		E2638FBF28C207B500E9D8C5 /* particle_system_solver2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4728C2078F00E9D8C5 /* particle_system_solver2_render.swift */; };
+		E2638FC028C207B500E9D8C5 /* sph_points_to_implicit3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4828C2078F00E9D8C5 /* sph_points_to_implicit3.swift */; };
+		E2638FC128C207B500E9D8C5 /* vector4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4928C2078F00E9D8C5 /* vector4.swift */; };
+		E2638FC228C207B500E9D8C5 /* triangle3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4A28C2078F00E9D8C5 /* triangle3.swift */; };
+		E2638FC328C207B500E9D8C5 /* sph_points_to_implicit2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4C28C2078F00E9D8C5 /* sph_points_to_implicit2_render.swift */; };
+		E2638FC428C207B500E9D8C5 /* grid_backward_euler_diffusion_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4D28C2078F00E9D8C5 /* grid_backward_euler_diffusion_solver3.metal */; };
+		E2638FC528C207B500E9D8C5 /* array_accessor3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4E28C2078F00E9D8C5 /* array_accessor3.metal */; };
+		E2638FC628C207B500E9D8C5 /* grid_single_phase_pressure_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E4F28C2079000E9D8C5 /* grid_single_phase_pressure_solver2.metal */; };
+		E2638FC728C207B500E9D8C5 /* array_accessor1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5028C2079000E9D8C5 /* array_accessor1.swift */; };
+		E2638FC828C207B500E9D8C5 /* fcc_lattice_point_generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5128C2079000E9D8C5 /* fcc_lattice_point_generator.swift */; };
+		E2638FC928C207B500E9D8C5 /* array1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5228C2079000E9D8C5 /* array1.swift */; };
+		E2638FCA28C207B500E9D8C5 /* pci_sph_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5328C2079000E9D8C5 /* pci_sph_solver3.swift */; };
+		E2638FCB28C207B500E9D8C5 /* point_parallel_hash_grid_searcher2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5428C2079000E9D8C5 /* point_parallel_hash_grid_searcher2.swift */; };
+		E2638FCC28C207B500E9D8C5 /* points_to_implicit2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5528C2079000E9D8C5 /* points_to_implicit2.swift */; };
+		E2638FCD28C207B500E9D8C5 /* box2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5628C2079000E9D8C5 /* box2.swift */; };
+		E2638FCE28C207B500E9D8C5 /* iterative_level_set_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5828C2079000E9D8C5 /* iterative_level_set_solver2.swift */; };
+		E2638FCF28C207B500E9D8C5 /* fdm_iccg_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5928C2079000E9D8C5 /* fdm_iccg_solver3.swift */; };
+		E2638FD028C207B500E9D8C5 /* array_accessor2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5A28C2079100E9D8C5 /* array_accessor2.metal */; };
+		E2638FD128C207B500E9D8C5 /* fdm_jacobi_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5B28C2079100E9D8C5 /* fdm_jacobi_solver3.metal */; };
+		E2638FD228C207B500E9D8C5 /* array_samplers1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5C28C2079100E9D8C5 /* array_samplers1.swift */; };
+		E2638FD328C207B500E9D8C5 /* iterative_level_set_solvers_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5D28C2079100E9D8C5 /* iterative_level_set_solvers_render.swift */; };
+		E2638FD428C207B500E9D8C5 /* rigid_body_collider2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5E28C2079100E9D8C5 /* rigid_body_collider2.swift */; };
+		E2638FD528C207B500E9D8C5 /* sph_solver2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E5F28C2079100E9D8C5 /* sph_solver2_render.swift */; };
+		E2638FD628C207B500E9D8C5 /* vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6028C2079100E9D8C5 /* vector3.swift */; };
+		E2638FD728C207B500E9D8C5 /* anisotropic_points_to_implicit3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6128C2079100E9D8C5 /* anisotropic_points_to_implicit3.swift */; };
+		E2638FD828C207B600E9D8C5 /* vertex_centered_vector_grid2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6228C2079100E9D8C5 /* vertex_centered_vector_grid2.metal */; };
+		E2638FD928C207B600E9D8C5 /* vertex_centered_vector_grid2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6328C2079200E9D8C5 /* vertex_centered_vector_grid2.swift */; };
+		E2638FDA28C207B600E9D8C5 /* volume_particle_emitters_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6428C2079200E9D8C5 /* volume_particle_emitters_render.swift */; };
+		E2638FDB28C207B600E9D8C5 /* zhu_bridson_points_to_implicit2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6528C2079200E9D8C5 /* zhu_bridson_points_to_implicit2.swift */; };
+		E2638FDC28C207B600E9D8C5 /* fdm_mg_linear_system2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6628C2079200E9D8C5 /* fdm_mg_linear_system2.metal */; };
+		E2638FDD28C207B600E9D8C5 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6728C2079200E9D8C5 /* animation.swift */; };
+		E2638FDE28C207B600E9D8C5 /* particle_emitter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6828C2079200E9D8C5 /* particle_emitter3.swift */; };
+		E2638FDF28C207B600E9D8C5 /* size3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6928C2079200E9D8C5 /* size3.swift */; };
+		E2638FE028C207B600E9D8C5 /* grid_single_phase_pressure_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6A28C2079200E9D8C5 /* grid_single_phase_pressure_solver3.metal */; };
+		E2638FE128C207B600E9D8C5 /* sph_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6B28C2079200E9D8C5 /* sph_solver3.swift */; };
+		E2638FE228C207B600E9D8C5 /* grid_forward_euler_diffusion_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6C28C2079300E9D8C5 /* grid_forward_euler_diffusion_solver2.metal */; };
+		E2638FE328C207B600E9D8C5 /* implicit_surface_set2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6D28C2079300E9D8C5 /* implicit_surface_set2.swift */; };
+		E2638FE428C207B600E9D8C5 /* sph_kernels2_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6E28C2079300E9D8C5 /* sph_kernels2_impl.metal */; };
+		E2638FE528C207B600E9D8C5 /* fdm_mgpcg_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E6F28C2079300E9D8C5 /* fdm_mgpcg_solver3.swift */; };
+		E2638FE628C207B600E9D8C5 /* sph_solver3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7028C2079300E9D8C5 /* sph_solver3_render.swift */; };
+		E2638FE728C207B600E9D8C5 /* sph_points_to_implicit3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7128C2079300E9D8C5 /* sph_points_to_implicit3_render.swift */; };
+		E2638FE828C207B600E9D8C5 /* scalar_field3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7228C2079300E9D8C5 /* scalar_field3.swift */; };
+		E2638FE928C207B600E9D8C5 /* grid_fluid_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7328C2079300E9D8C5 /* grid_fluid_solver3.metal */; };
+		E2638FEA28C207B600E9D8C5 /* constant_scalar_field2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7428C2079300E9D8C5 /* constant_scalar_field2.swift */; };
+		E2638FEB28C207B600E9D8C5 /* fdm_linear_system3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7528C2079400E9D8C5 /* fdm_linear_system3.metal */; };
+		E2638FEC28C207B600E9D8C5 /* fdm_linear_system2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7628C2079400E9D8C5 /* fdm_linear_system2.swift */; };
+		E2638FED28C207B600E9D8C5 /* constant_scalar_field2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7728C2079400E9D8C5 /* constant_scalar_field2.metal */; };
+		E2638FEE28C207B600E9D8C5 /* grid_boundary_condition_solvers_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7828C2079400E9D8C5 /* grid_boundary_condition_solvers_render.swift */; };
+		E2638FEF28C207B600E9D8C5 /* level_set_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7928C2079400E9D8C5 /* level_set_solver2.swift */; };
+		E2638FF028C207B600E9D8C5 /* marching_squares_table.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7A28C2079500E9D8C5 /* marching_squares_table.swift */; };
+		E2638FF128C207B600E9D8C5 /* anisotropic_points_to_implicit2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7B28C2079500E9D8C5 /* anisotropic_points_to_implicit2_render.swift */; };
+		E2638FF228C207B600E9D8C5 /* pci_sph_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7C28C2079600E9D8C5 /* pci_sph_solver3.metal */; };
+		E2638FF328C207B600E9D8C5 /* array_samplers.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7D28C2079600E9D8C5 /* array_samplers.metal */; };
+		E2638FF428C207B600E9D8C5 /* sph_kernels2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7E28C2079600E9D8C5 /* sph_kernels2.swift */; };
+		E2638FF528C207B600E9D8C5 /* priority_queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E7F28C2079600E9D8C5 /* priority_queue.swift */; };
+		E2638FF628C207B600E9D8C5 /* triangle_mesh_to_sdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8028C2079600E9D8C5 /* triangle_mesh_to_sdf.swift */; };
+		E2638FF728C207B600E9D8C5 /* bounding_box2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8128C2079600E9D8C5 /* bounding_box2.swift */; };
+		E2638FF828C207B600E9D8C5 /* array_utils_GPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8228C2079600E9D8C5 /* array_utils_GPU.swift */; };
+		E2638FF928C207B600E9D8C5 /* plane3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8328C2079600E9D8C5 /* plane3.swift */; };
+		E2638FFA28C207B600E9D8C5 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8428C2079600E9D8C5 /* Renderer.swift */; };
+		E2638FFB28C207B600E9D8C5 /* vector_field3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8528C2079700E9D8C5 /* vector_field3.swift */; };
+		E2638FFC28C207B600E9D8C5 /* ray2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8628C2079700E9D8C5 /* ray2.swift */; };
+		E2638FFD28C207B600E9D8C5 /* box3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8728C2079700E9D8C5 /* box3.swift */; };
+		E2638FFE28C207B600E9D8C5 /* bvh3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8828C2079700E9D8C5 /* bvh3.swift */; };
+		E2638FFF28C207B600E9D8C5 /* constant_scalar_field2_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8928C2079700E9D8C5 /* constant_scalar_field2_impl.metal */; };
+		E263900028C207B600E9D8C5 /* grid_single_phase_pressure_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8A28C2079700E9D8C5 /* grid_single_phase_pressure_solver2.swift */; };
+		E263900128C207B600E9D8C5 /* octree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8B28C2079700E9D8C5 /* octree.swift */; };
+		E263900228C207B600E9D8C5 /* list_query_engine3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8C28C2079700E9D8C5 /* list_query_engine3.swift */; };
+		E263900328C207B600E9D8C5 /* grid_backward_euler_diffusion_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8D28C2079800E9D8C5 /* grid_backward_euler_diffusion_solver2.metal */; };
+		E263900428C207B600E9D8C5 /* semi_lagrangian2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8E28C2079800E9D8C5 /* semi_lagrangian2.swift */; };
+		E263900528C207B600E9D8C5 /* array2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E8F28C2079800E9D8C5 /* array2.swift */; };
+		E263900628C207B600E9D8C5 /* sphere3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9028C2079800E9D8C5 /* sphere3.swift */; };
+		E263900728C207B600E9D8C5 /* fdm_jacobi_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9128C2079800E9D8C5 /* fdm_jacobi_solver2.metal */; };
+		E263900828C207B600E9D8C5 /* grid_fluid_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9228C2079800E9D8C5 /* grid_fluid_solver2.swift */; };
+		E263900928C207B600E9D8C5 /* vertex_centered_scalar_grid3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9328C2079800E9D8C5 /* vertex_centered_scalar_grid3.metal */; };
+		E263900A28C207B600E9D8C5 /* volume_grid_emitter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9428C2079800E9D8C5 /* volume_grid_emitter3.swift */; };
+		E263900B28C207B600E9D8C5 /* custom_vector_field3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9528C2079800E9D8C5 /* custom_vector_field3.swift */; };
+		E263900C28C207B600E9D8C5 /* grid_pressure_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9628C2079900E9D8C5 /* grid_pressure_solver2.swift */; };
+		E263900D28C207B600E9D8C5 /* pic_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9728C2079900E9D8C5 /* pic_solver2.metal */; };
+		E263900E28C207B600E9D8C5 /* face_centered_grid3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9828C2079900E9D8C5 /* face_centered_grid3.swift */; };
+		E263900F28C207B600E9D8C5 /* level_set_liquid_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9928C2079900E9D8C5 /* level_set_liquid_solver2.swift */; };
+		E263901028C207B600E9D8C5 /* grid_backward_euler_diffusion_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9A28C2079900E9D8C5 /* grid_backward_euler_diffusion_solver2.swift */; };
+		E263901128C207B600E9D8C5 /* grid_single_phase_pressure_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9B28C2079900E9D8C5 /* grid_single_phase_pressure_solver3.swift */; };
+		E263901228C207B600E9D8C5 /* grid_emitter_set2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9C28C2079900E9D8C5 /* grid_emitter_set2.swift */; };
+		E263901328C207B600E9D8C5 /* particle_system_data2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9D28C2079A00E9D8C5 /* particle_system_data2.swift */; };
+		E263901428C207B600E9D8C5 /* level_set_liquid_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9E28C2079A00E9D8C5 /* level_set_liquid_solver3.metal */; };
+		E263901528C207B600E9D8C5 /* fdm_gauss_seidel_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638E9F28C2079A00E9D8C5 /* fdm_gauss_seidel_solver3.metal */; };
+		E263901628C207B600E9D8C5 /* cell_centered_vector_grid2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EA028C2079A00E9D8C5 /* cell_centered_vector_grid2.metal */; };
+		E263901728C207B600E9D8C5 /* scalar_grid3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EA128C2079A00E9D8C5 /* scalar_grid3.swift */; };
+		E263901828C207B600E9D8C5 /* sph_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EA228C2079A00E9D8C5 /* sph_solver2.swift */; };
+		E263901928C207B600E9D8C5 /* fdm_utils.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EA328C2079A00E9D8C5 /* fdm_utils.metal */; };
+		E263901A28C207B600E9D8C5 /* zhu_bridson_points_to_implicit2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EA428C2079A00E9D8C5 /* zhu_bridson_points_to_implicit2_render.swift */; };
+		E263901B28C207B600E9D8C5 /* point_generator2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EA528C2079B00E9D8C5 /* point_generator2.swift */; };
+		E263901C28C207B600E9D8C5 /* point_simple_list_searcher2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EA628C2079B00E9D8C5 /* point_simple_list_searcher2.swift */; };
+		E263901D28C207B600E9D8C5 /* grid_boundary_condition_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EA728C2079B00E9D8C5 /* grid_boundary_condition_solver2.swift */; };
+		E263901E28C207B600E9D8C5 /* anisotropic_points_to_implicit2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EA828C2079B00E9D8C5 /* anisotropic_points_to_implicit2.swift */; };
+		E263901F28C207B600E9D8C5 /* constant_vector_field3_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EA928C2079B00E9D8C5 /* constant_vector_field3_impl.metal */; };
+		E263902028C207B600E9D8C5 /* face_centered_grid2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EAA28C2079B00E9D8C5 /* face_centered_grid2.swift */; };
+		E263902128C207B600E9D8C5 /* color_utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EAB28C2079B00E9D8C5 /* color_utils.swift */; };
+		E263902228C207B600E9D8C5 /* point_hash_grid_searcher2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EAC28C2079B00E9D8C5 /* point_hash_grid_searcher2.swift */; };
+		E263902328C207B600E9D8C5 /* point2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EAD28C2079C00E9D8C5 /* point2.swift */; };
+		E263902428C207B600E9D8C5 /* level_set_liquid_solver3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EAE28C2079C00E9D8C5 /* level_set_liquid_solver3_render.swift */; };
+		E263902528C207B600E9D8C5 /* point_particle_emitter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EAF28C2079C00E9D8C5 /* point_particle_emitter3.swift */; };
+		E263902628C207B600E9D8C5 /* sph_kernels3_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EB028C2079C00E9D8C5 /* sph_kernels3_impl.metal */; };
+		E263902728C207B600E9D8C5 /* fdm_jacobi_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EB128C2079C00E9D8C5 /* fdm_jacobi_solver2.swift */; };
+		E263902828C207B600E9D8C5 /* grid_blocked_boundary_condition_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EB228C2079C00E9D8C5 /* grid_blocked_boundary_condition_solver2.swift */; };
+		E263902928C207B600E9D8C5 /* grid_blocked_boundary_condition_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EB328C2079C00E9D8C5 /* grid_blocked_boundary_condition_solver3.swift */; };
+		E263902B28C207B600E9D8C5 /* spherical_points_to_implicit2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EB528C2079E00E9D8C5 /* spherical_points_to_implicit2.swift */; };
+		E263902C28C207B600E9D8C5 /* plane2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EB628C2079E00E9D8C5 /* plane2.swift */; };
+		E263902D28C207B600E9D8C5 /* surface2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EB728C2079E00E9D8C5 /* surface2.swift */; };
+		E263902E28C207B600E9D8C5 /* upwind_level_set_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EB828C2079E00E9D8C5 /* upwind_level_set_solver3.swift */; };
+		E263902F28C207B600E9D8C5 /* spherical_points_to_implicit3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EB928C2079E00E9D8C5 /* spherical_points_to_implicit3_render.swift */; };
+		E263903028C207B600E9D8C5 /* vector_grid2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EBA28C2079E00E9D8C5 /* vector_grid2.swift */; };
+		E263903128C207B600E9D8C5 /* particle_system_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EBB28C2079E00E9D8C5 /* particle_system_solver3.metal */; };
+		E263903228C207B600E9D8C5 /* pde.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EBC28C2079E00E9D8C5 /* pde.swift */; };
+		E263903328C207B600E9D8C5 /* cell_centered_vector_grid3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EBD28C2079E00E9D8C5 /* cell_centered_vector_grid3.swift */; };
+		E263903428C207B600E9D8C5 /* fdm_iccg_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EBE28C2079E00E9D8C5 /* fdm_iccg_solver2.swift */; };
+		E263903528C207B600E9D8C5 /* cell_centered_vector_grid3_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EBF28C2079F00E9D8C5 /* cell_centered_vector_grid3_impl.metal */; };
+		E263903628C207B600E9D8C5 /* anisotropic_points_to_implicit3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EC028C2079F00E9D8C5 /* anisotropic_points_to_implicit3_render.swift */; };
+		E263903728C207B600E9D8C5 /* eno_level_set_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EC128C2079F00E9D8C5 /* eno_level_set_solver3.swift */; };
+		E263903828C207B600E9D8C5 /* math_utils.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EC228C2079F00E9D8C5 /* math_utils.metal */; };
+		E263903928C207B600E9D8C5 /* custom_scalar_field2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EC328C2079F00E9D8C5 /* custom_scalar_field2.swift */; };
+		E263903A28C207B600E9D8C5 /* point_neighbor_searcher3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EC428C2079F00E9D8C5 /* point_neighbor_searcher3.swift */; };
+		E263903B28C207B600E9D8C5 /* rigid_body_collider3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EC528C2079F00E9D8C5 /* rigid_body_collider3.swift */; };
+		E263903C28C207B600E9D8C5 /* sph_system_data2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EC628C207A000E9D8C5 /* sph_system_data2.swift */; };
+		E263903D28C207B600E9D8C5 /* apic_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EC728C207A000E9D8C5 /* apic_solver2.metal */; };
+		E263903E28C207B600E9D8C5 /* hello_fluid_sim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EC828C207A000E9D8C5 /* hello_fluid_sim.swift */; };
+		E263903F28C207B600E9D8C5 /* points_to_implicit3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EC928C207A000E9D8C5 /* points_to_implicit3.swift */; };
+		E263904028C207B600E9D8C5 /* particle_emitter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638ECA28C207A000E9D8C5 /* particle_emitter2.swift */; };
+		E263904128C207B600E9D8C5 /* face_centered_grid2_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638ECB28C207A000E9D8C5 /* face_centered_grid2_impl.metal */; };
+		E263904228C207B600E9D8C5 /* math_utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638ECC28C207A000E9D8C5 /* math_utils.swift */; };
+		E263904328C207B600E9D8C5 /* sph_system_data3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638ECD28C207A000E9D8C5 /* sph_system_data3.swift */; };
+		E263904428C207B600E9D8C5 /* fdm_mgpcg_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638ECE28C207A000E9D8C5 /* fdm_mgpcg_solver2.swift */; };
+		E263904528C207B600E9D8C5 /* array_samplers3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638ECF28C207A000E9D8C5 /* array_samplers3.metal */; };
+		E263904628C207B600E9D8C5 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638ED028C207A100E9D8C5 /* Node.swift */; };
+		E263904728C207B600E9D8C5 /* cell_centered_vector_grid2_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638ED128C207A100E9D8C5 /* cell_centered_vector_grid2_impl.metal */; };
+		E263904828C207B600E9D8C5 /* cell_centered_scalar_grid2_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638ED228C207A100E9D8C5 /* cell_centered_scalar_grid2_impl.metal */; };
+		E263904928C207B600E9D8C5 /* particle_emitter_set3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638ED328C207A100E9D8C5 /* particle_emitter_set3.swift */; };
+		E263904A28C207B600E9D8C5 /* fdm_mg_linear_system3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638ED428C207A100E9D8C5 /* fdm_mg_linear_system3.metal */; };
+		E263904B28C207B600E9D8C5 /* grid.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638ED528C207A100E9D8C5 /* grid.metal */; };
+		E263904C28C207B600E9D8C5 /* fdm_mg_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638ED628C207A100E9D8C5 /* fdm_mg_solver3.swift */; };
+		E263904D28C207B600E9D8C5 /* array_utils_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638ED728C207A200E9D8C5 /* array_utils_render.swift */; };
+		E263904E28C207B600E9D8C5 /* fdm_gauss_seidel_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638ED828C207A200E9D8C5 /* fdm_gauss_seidel_solver2.metal */; };
+		E263904F28C207B600E9D8C5 /* blas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638ED928C207A200E9D8C5 /* blas.swift */; };
+		E263905028C207B600E9D8C5 /* cubic_semi_lagrangian2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EDA28C207A200E9D8C5 /* cubic_semi_lagrangian2.swift */; };
+		E263905128C207B600E9D8C5 /* cylinder3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EDB28C207A200E9D8C5 /* cylinder3.swift */; };
+		E263905228C207B600E9D8C5 /* implicit_surface3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EDC28C207A200E9D8C5 /* implicit_surface3.swift */; };
+		E263905328C207B600E9D8C5 /* sph_kernels3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EDD28C207A200E9D8C5 /* sph_kernels3.metal */; };
+		E263905428C207B600E9D8C5 /* constant_vector_field3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EDE28C207A200E9D8C5 /* constant_vector_field3.swift */; };
+		E263905528C207B600E9D8C5 /* flip_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EDF28C207A200E9D8C5 /* flip_solver3.swift */; };
+		E263905628C207B600E9D8C5 /* animation_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EE028C207A200E9D8C5 /* animation_render.swift */; };
+		E263905728C207B600E9D8C5 /* grid_smoke_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EE128C207A300E9D8C5 /* grid_smoke_solver2.swift */; };
+		E263905828C207B600E9D8C5 /* constant_scalar_field3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EE228C207A300E9D8C5 /* constant_scalar_field3.metal */; };
+		E263905928C207B600E9D8C5 /* flip_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EE328C207A300E9D8C5 /* flip_solver3.metal */; };
+		E263905A28C207B600E9D8C5 /* apic_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EE428C207A300E9D8C5 /* apic_solver2.swift */; };
+		E263905B28C207B600E9D8C5 /* grid2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EE528C207A300E9D8C5 /* grid2.swift */; };
+		E263905C28C207B600E9D8C5 /* advection_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EE628C207A300E9D8C5 /* advection_solver3.swift */; };
+		E263905D28C207B600E9D8C5 /* grid_diffusion_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EE728C207A300E9D8C5 /* grid_diffusion_solver2.swift */; };
+		E263905E28C207B600E9D8C5 /* grid_diffusion_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EE828C207A400E9D8C5 /* grid_diffusion_solver3.swift */; };
+		E263905F28C207B600E9D8C5 /* grid_pressure_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EE928C207A400E9D8C5 /* grid_pressure_solver3.swift */; };
+		E263906028C207B600E9D8C5 /* grid_fractional_boundary_condition_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EEA28C207A400E9D8C5 /* grid_fractional_boundary_condition_solver3.swift */; };
+		E263906128C207B600E9D8C5 /* level_set_liquid_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EEB28C207A400E9D8C5 /* level_set_liquid_solver2.metal */; };
+		E263906228C207B600E9D8C5 /* constant_vector_field2_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EEC28C207A400E9D8C5 /* constant_vector_field2_impl.metal */; };
+		E263906328C207B600E9D8C5 /* quaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EED28C207A400E9D8C5 /* quaternion.swift */; };
+		E263906428C207B600E9D8C5 /* transform3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EEE28C207A400E9D8C5 /* transform3.swift */; };
+		E263906528C207B600E9D8C5 /* eno_level_set_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EEF28C207A500E9D8C5 /* eno_level_set_solver2.swift */; };
+		E263906628C207B600E9D8C5 /* particle_system_data3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EF028C207A500E9D8C5 /* particle_system_data3.swift */; };
+		E263906728C207B600E9D8C5 /* pic_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EF128C207A500E9D8C5 /* pic_solver3.swift */; };
+		E263906828C207B600E9D8C5 /* volume_particle_emitter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EF228C207A500E9D8C5 /* volume_particle_emitter2.swift */; };
+		E263906928C207B600E9D8C5 /* cell_centered_vector_grid2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EF328C207A600E9D8C5 /* cell_centered_vector_grid2.swift */; };
+		E263906A28C207B600E9D8C5 /* face_centered_grid2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EF428C207A600E9D8C5 /* face_centered_grid2.metal */; };
+		E263906B28C207B600E9D8C5 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EF528C207A600E9D8C5 /* constants.swift */; };
+		E263906C28C207B600E9D8C5 /* collocated_vector_grid2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EF628C207A600E9D8C5 /* collocated_vector_grid2.swift */; };
+		E263906D28C207B600E9D8C5 /* grid_fractional_single_phase_pressure_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EF728C207A700E9D8C5 /* grid_fractional_single_phase_pressure_solver3.metal */; };
+		E263906F28C207B600E9D8C5 /* grid_system_data3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EF928C207A700E9D8C5 /* grid_system_data3.swift */; };
+		E263907028C207B600E9D8C5 /* array_samplers2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EFA28C207A700E9D8C5 /* array_samplers2.metal */; };
+		E263907128C207B600E9D8C5 /* nearest_neighbor_query_engine3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EFB28C207A700E9D8C5 /* nearest_neighbor_query_engine3.swift */; };
+		E263907228C207B600E9D8C5 /* face_centered_grid3_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EFC28C207A700E9D8C5 /* face_centered_grid3_impl.metal */; };
+		E263907328C207B600E9D8C5 /* sph_kernels2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638EFD28C207A700E9D8C5 /* sph_kernels2.metal */; };
+		E263907428C207B600E9D8C5 /* spherical_points_to_implicit3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EFE28C207A800E9D8C5 /* spherical_points_to_implicit3.swift */; };
+		E263907528C207B600E9D8C5 /* grid3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638EFF28C207A800E9D8C5 /* grid3.swift */; };
+		E263907628C207B600E9D8C5 /* grid_emitter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0028C207A800E9D8C5 /* grid_emitter3.swift */; };
+		E263907728C207B600E9D8C5 /* constant_vector_field3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0128C207A800E9D8C5 /* constant_vector_field3.metal */; };
+		E263907828C207B600E9D8C5 /* bcc_lattice_point_generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0228C207A800E9D8C5 /* bcc_lattice_point_generator.swift */; };
+		E263907928C207B600E9D8C5 /* cell_centered_scalar_grid3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0328C207A800E9D8C5 /* cell_centered_scalar_grid3.swift */; };
+		E263907A28C207B600E9D8C5 /* fdm_mg_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0428C207A800E9D8C5 /* fdm_mg_solver2.swift */; };
+		E263907B28C207B600E9D8C5 /* physics_animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0528C207A800E9D8C5 /* physics_animation.swift */; };
+		E263907C28C207B600E9D8C5 /* grid_forward_euler_diffusion_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0628C207A800E9D8C5 /* grid_forward_euler_diffusion_solver3.swift */; };
+		E263907E28C207B600E9D8C5 /* pic_solver3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0828C207A900E9D8C5 /* pic_solver3_render.swift */; };
+		E263907F28C207B600E9D8C5 /* collider_set2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0928C207A900E9D8C5 /* collider_set2.swift */; };
+		E263908028C207B600E9D8C5 /* array_accessor2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0A28C207A900E9D8C5 /* array_accessor2.swift */; };
+		E263908128C207B600E9D8C5 /* custom_implicit_surface2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0B28C207A900E9D8C5 /* custom_implicit_surface2.swift */; };
+		E263908228C207B600E9D8C5 /* grid_point_generator2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0C28C207A900E9D8C5 /* grid_point_generator2.swift */; };
+		E263908328C207B600E9D8C5 /* marching_cubes_table.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0D28C207A900E9D8C5 /* marching_cubes_table.swift */; };
+		E263908428C207B600E9D8C5 /* point_particle_emitter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0E28C207AA00E9D8C5 /* point_particle_emitter2.swift */; };
+		E263908528C207B600E9D8C5 /* spherical_points_to_implicit2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F0F28C207AA00E9D8C5 /* spherical_points_to_implicit2_render.swift */; };
+		E263908628C207B600E9D8C5 /* sph_system_data3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1028C207AA00E9D8C5 /* sph_system_data3_render.swift */; };
+		E263908728C207B600E9D8C5 /* field.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1128C207AA00E9D8C5 /* field.swift */; };
+		E263908828C207B600E9D8C5 /* level_set_liquid_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1228C207AA00E9D8C5 /* level_set_liquid_solver3.swift */; };
+		E263908928C207B600E9D8C5 /* vertex_centered_scalar_grid2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1328C207AA00E9D8C5 /* vertex_centered_scalar_grid2.swift */; };
+		E263908A28C207B600E9D8C5 /* mg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1428C207AA00E9D8C5 /* mg.swift */; };
+		E263908B28C207B600E9D8C5 /* implicit_surface_set3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1528C207AA00E9D8C5 /* implicit_surface_set3.swift */; };
+		E263908C28C207B600E9D8C5 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1628C207AA00E9D8C5 /* Emitter.swift */; };
+		E263908D28C207B600E9D8C5 /* fdm_cg_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1728C207AB00E9D8C5 /* fdm_cg_solver2.swift */; };
+		E263908E28C207B600E9D8C5 /* grid_diffusion_solvers_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1828C207AB00E9D8C5 /* grid_diffusion_solvers_render.swift */; };
+		E263908F28C207B600E9D8C5 /* vertex_centered_vector_grid2_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1928C207AB00E9D8C5 /* vertex_centered_vector_grid2_impl.metal */; };
+		E263909028C207B600E9D8C5 /* fmm_level_set_solvers_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1A28C207AB00E9D8C5 /* fmm_level_set_solvers_render.swift */; };
+		E263909128C207B600E9D8C5 /* point_parallel_hash_grid_searcher3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1B28C207AB00E9D8C5 /* point_parallel_hash_grid_searcher3.swift */; };
+		E263909228C207B600E9D8C5 /* sphere2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1C28C207AB00E9D8C5 /* sphere2.swift */; };
+		E263909328C207B600E9D8C5 /* flip_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1D28C207AB00E9D8C5 /* flip_solver2.swift */; };
+		E263909428C207B600E9D8C5 /* implicit_triangle_mesh3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1E28C207AC00E9D8C5 /* implicit_triangle_mesh3.swift */; };
+		E263909528C207B600E9D8C5 /* volume_particle_emitter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F1F28C207AC00E9D8C5 /* volume_particle_emitter3.swift */; };
+		E263909628C207B600E9D8C5 /* constant_scalar_field3_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2028C207AC00E9D8C5 /* constant_scalar_field3_impl.metal */; };
+		E263909728C207B600E9D8C5 /* zhu_bridson_points_to_implicit3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2128C207AC00E9D8C5 /* zhu_bridson_points_to_implicit3_render.swift */; };
+		E263909828C207B600E9D8C5 /* bvh2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2228C207AC00E9D8C5 /* bvh2.swift */; };
+		E263909928C207B600E9D8C5 /* apic_solver3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2328C207AC00E9D8C5 /* apic_solver3_render.swift */; };
+		E263909A28C207B600E9D8C5 /* apic_solver2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2428C207AC00E9D8C5 /* apic_solver2_render.swift */; };
+		E263909B28C207B600E9D8C5 /* vertex_centered_vector_grid3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2528C207AC00E9D8C5 /* vertex_centered_vector_grid3.swift */; };
+		E263909C28C207B600E9D8C5 /* grid_fractional_single_phase_pressure_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2628C207AC00E9D8C5 /* grid_fractional_single_phase_pressure_solver2.metal */; };
+		E263909D28C207B600E9D8C5 /* semi_lagrangian3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2728C207AD00E9D8C5 /* semi_lagrangian3.swift */; };
+		E263909E28C207B600E9D8C5 /* line_shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2828C207AD00E9D8C5 /* line_shader.metal */; };
+		E263909F28C207B600E9D8C5 /* collocated_vector_grid3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2928C207AD00E9D8C5 /* collocated_vector_grid3.swift */; };
+		E26390A028C207B600E9D8C5 /* grid_fluid_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2A28C207AD00E9D8C5 /* grid_fluid_solver2.metal */; };
+		E26390A128C207B600E9D8C5 /* collider2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2B28C207AD00E9D8C5 /* collider2.swift */; };
+		E26390A228C207B600E9D8C5 /* point_shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2C28C207AD00E9D8C5 /* point_shader.metal */; };
+		E26390A328C207B600E9D8C5 /* fdm_linear_system3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2D28C207AD00E9D8C5 /* fdm_linear_system3.swift */; };
+		E26390A428C207B700E9D8C5 /* bounding_box3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2E28C207AE00E9D8C5 /* bounding_box3.swift */; };
+		E26390A528C207B700E9D8C5 /* surface_set3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F2F28C207AE00E9D8C5 /* surface_set3.swift */; };
+		E26390A628C207B700E9D8C5 /* triangle_point_generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3028C207AE00E9D8C5 /* triangle_point_generator.swift */; };
+		E26390A728C207B700E9D8C5 /* cell_centered_vector_grid3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3128C207AE00E9D8C5 /* cell_centered_vector_grid3.metal */; };
+		E26390A828C207B700E9D8C5 /* vertex_centered_vector_grid3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3228C207AE00E9D8C5 /* vertex_centered_vector_grid3.metal */; };
+		E26390A928C207B700E9D8C5 /* heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3328C207AE00E9D8C5 /* heap.swift */; };
+		E26390AA28C207B700E9D8C5 /* list_query_engine2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3428C207AE00E9D8C5 /* list_query_engine2.swift */; };
+		E26390AB28C207B700E9D8C5 /* cell_centered_scalar_grid3_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3528C207AE00E9D8C5 /* cell_centered_scalar_grid3_impl.metal */; };
+		E26390AC28C207B700E9D8C5 /* fdm_mg_linear_system2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3628C207AF00E9D8C5 /* fdm_mg_linear_system2.swift */; };
+		E26390AD28C207B700E9D8C5 /* fdm_gauss_seidel_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3728C207AF00E9D8C5 /* fdm_gauss_seidel_solver2.swift */; };
+		E26390AE28C207B700E9D8C5 /* custom_vector_field2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3828C207AF00E9D8C5 /* custom_vector_field2.swift */; };
+		E26390AF28C207B700E9D8C5 /* constants.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3928C207AF00E9D8C5 /* constants.metal */; };
+		E26390B028C207B700E9D8C5 /* collider3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3A28C207AF00E9D8C5 /* collider3.swift */; };
+		E26390B128C207B700E9D8C5 /* grid_backward_euler_diffusion_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3B28C207AF00E9D8C5 /* grid_backward_euler_diffusion_solver3.swift */; };
+		E26390B228C207B700E9D8C5 /* grid_smoke_solver_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3C28C207AF00E9D8C5 /* grid_smoke_solver_render.swift */; };
+		E26390B328C207B700E9D8C5 /* cell_centered_scalar_grid2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3D28C207B000E9D8C5 /* cell_centered_scalar_grid2.metal */; };
+		E26390B428C207B700E9D8C5 /* grid_forward_euler_diffusion_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3E28C207B000E9D8C5 /* grid_forward_euler_diffusion_solver2.swift */; };
+		E26390B528C207B700E9D8C5 /* Particles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F3F28C207B000E9D8C5 /* Particles.swift */; };
+		E26390B628C207B700E9D8C5 /* grid_emitter_set3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4028C207B000E9D8C5 /* grid_emitter_set3.swift */; };
+		E26390B728C207B700E9D8C5 /* pci_sph_solver3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4128C207B000E9D8C5 /* pci_sph_solver3_render.swift */; };
+		E26390B828C207B700E9D8C5 /* point_hash_grid_searchers_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4228C207B000E9D8C5 /* point_hash_grid_searchers_render.swift */; };
+		E26390B928C207B700E9D8C5 /* array_accessor3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4328C207B000E9D8C5 /* array_accessor3.swift */; };
+		E26390BA28C207B700E9D8C5 /* samplers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4428C207B100E9D8C5 /* samplers.swift */; };
+		E26390BB28C207B700E9D8C5 /* collider_set3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4528C207B100E9D8C5 /* collider_set3.swift */; };
+		E26390BC28C207B700E9D8C5 /* grid_fractional_single_phase_pressure_solver3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4628C207B100E9D8C5 /* grid_fractional_single_phase_pressure_solver3.swift */; };
+		E26390BD28C207B700E9D8C5 /* grid_forward_euler_diffusion_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4728C207B100E9D8C5 /* grid_forward_euler_diffusion_solver3.metal */; };
+		E26390BE28C207B700E9D8C5 /* marching_cubes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4828C207B100E9D8C5 /* marching_cubes.swift */; };
+		E26390BF28C207B700E9D8C5 /* pic_solver2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4928C207B100E9D8C5 /* pic_solver2_render.swift */; };
+		E26390C028C207B700E9D8C5 /* constant_vector_field2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4A28C207B200E9D8C5 /* constant_vector_field2.metal */; };
+		E26390C128C207B700E9D8C5 /* triangle_mesh_to_sdf_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4B28C207B200E9D8C5 /* triangle_mesh_to_sdf_render.swift */; };
+		E26390C228C207B700E9D8C5 /* vector_grid3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4C28C207B200E9D8C5 /* vector_grid3.swift */; };
+		E26390C328C207B700E9D8C5 /* apic_solver3.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4D28C207B200E9D8C5 /* apic_solver3.metal */; };
+		E26390C428C207B700E9D8C5 /* field_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4E28C207B200E9D8C5 /* field_render.swift */; };
+		E26390C528C207B700E9D8C5 /* vertex_centered_scalar_grid2_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F4F28C207B300E9D8C5 /* vertex_centered_scalar_grid2_impl.metal */; };
+		E26390C628C207B700E9D8C5 /* Particle.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5028C207B300E9D8C5 /* Particle.metal */; };
+		E26390C728C207B700E9D8C5 /* flip_solver3_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5128C207B300E9D8C5 /* flip_solver3_render.swift */; };
+		E26390C828C207B700E9D8C5 /* surface_to_implicit3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5228C207B300E9D8C5 /* surface_to_implicit3.swift */; };
+		E26390C928C207B700E9D8C5 /* array_utils_CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5328C207B300E9D8C5 /* array_utils_CPU.swift */; };
+		E26390CA28C207B700E9D8C5 /* level_set_utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5428C207B300E9D8C5 /* level_set_utils.swift */; };
+		E26390CB28C207B700E9D8C5 /* pic_solver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5528C207B300E9D8C5 /* pic_solver2.swift */; };
+		E26390CC28C207B700E9D8C5 /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5628C207B300E9D8C5 /* MathLibrary.swift */; };
+		E26390CD28C207B700E9D8C5 /* triangle_mesh3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5728C207B400E9D8C5 /* triangle_mesh3.swift */; };
+		E26390CE28C207B700E9D8C5 /* grid_smoke_solver2.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5828C207B400E9D8C5 /* grid_smoke_solver2.metal */; };
+		E26390CF28C207B700E9D8C5 /* point_generator3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5928C207B400E9D8C5 /* point_generator3.swift */; };
+		E26390D028C207B700E9D8C5 /* point_neighbor_searcher2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5A28C207B400E9D8C5 /* point_neighbor_searcher2.swift */; };
+		E26390D128C207B700E9D8C5 /* matrix2x2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5B28C207B400E9D8C5 /* matrix2x2.swift */; };
+		E26390D228C207B700E9D8C5 /* vertex_centered_scalar_grid3_impl.metal in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5C28C207B400E9D8C5 /* vertex_centered_scalar_grid3_impl.metal */; };
+		E26390D328C207B700E9D8C5 /* flip_solver2_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5D28C207B400E9D8C5 /* flip_solver2_render.swift */; };
+		E26390D428C207B700E9D8C5 /* custom_implicit_surface3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5E28C207B500E9D8C5 /* custom_implicit_surface3.swift */; };
+		E26390D528C207B700E9D8C5 /* array_samplers3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F5F28C207B500E9D8C5 /* array_samplers3.swift */; };
+		E26390D628C207B700E9D8C5 /* marching_cubes_render.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F6028C207B500E9D8C5 /* marching_cubes_render.swift */; };
+		E26390D728C207B700E9D8C5 /* fdm_mg_linear_system3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2638F6128C207B500E9D8C5 /* fdm_mg_linear_system3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E26062AA28C395EB000DDBEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E26062AB28C395FD000DDBEB /* kCubeTriMesh3x3x3As.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = kCubeTriMesh3x3x3As.obj; sourceTree = "<group>"; };
+		E26062AC28C395FD000DDBEB /* bunny.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = bunny.obj; sourceTree = "<group>"; };
+		E26062AD28C395FD000DDBEB /* cup.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = cup.obj; sourceTree = "<group>"; };
+		E26062AF28C395FD000DDBEB /* snowflake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowflake.png; sourceTree = "<group>"; };
+		E26062B028C395FD000DDBEB /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		E26062B128C395FD000DDBEB /* kSphereTriMesh5x5.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = kSphereTriMesh5x5.obj; sourceTree = "<group>"; };
+		E26062B228C395FD000DDBEB /* cube.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
 		E2638DD728C2071400E9D8C5 /* Fluid Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fluid Engine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2638DDA28C2071400E9D8C5 /* Fluid_EngineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fluid_EngineApp.swift; sourceTree = "<group>"; };
 		E2638DDC28C2071400E9D8C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2638DDE28C2071500E9D8C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2638DE128C2071500E9D8C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E2638DEA28C2078500E9D8C5 /* nearest_neighbor_query_engine2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearest_neighbor_query_engine2.swift; sourceTree = "<group>"; };
+		E2638DEB28C2078500E9D8C5 /* matrix3x3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matrix3x3.swift; sourceTree = "<group>"; };
+		E2638DEC28C2078500E9D8C5 /* face_centered_grid3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = face_centered_grid3.metal; sourceTree = "<group>"; };
+		E2638DED28C2078500E9D8C5 /* pci_sph_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pci_sph_solver2.swift; sourceTree = "<group>"; };
+		E2638DEE28C2078500E9D8C5 /* sph_kernels3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_kernels3.swift; sourceTree = "<group>"; };
+		E2638DEF28C2078500E9D8C5 /* surface_to_implicit2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = surface_to_implicit2.swift; sourceTree = "<group>"; };
+		E2638DF028C2078600E9D8C5 /* scalar_grid2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scalar_grid2.swift; sourceTree = "<group>"; };
+		E2638DF128C2078600E9D8C5 /* array_utils.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = array_utils.metal; sourceTree = "<group>"; };
+		E2638DF228C2078600E9D8C5 /* grid_boundary_condition_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_boundary_condition_solver3.swift; sourceTree = "<group>"; };
+		E2638DF328C2078600E9D8C5 /* particle_system_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = particle_system_solver2.swift; sourceTree = "<group>"; };
+		E2638DF428C2078600E9D8C5 /* flip_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = flip_solver2.metal; sourceTree = "<group>"; };
+		E2638DF528C2078600E9D8C5 /* iterative_level_set_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iterative_level_set_solver3.swift; sourceTree = "<group>"; };
+		E2638DF628C2078600E9D8C5 /* upwind_level_set_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upwind_level_set_solver2.swift; sourceTree = "<group>"; };
+		E2638DF728C2078600E9D8C5 /* RayMarching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RayMarching.swift; sourceTree = "<group>"; };
+		E2638DF828C2078700E9D8C5 /* array_accessor1.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = array_accessor1.metal; sourceTree = "<group>"; };
+		E2638DF928C2078700E9D8C5 /* size2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = size2.swift; sourceTree = "<group>"; };
+		E2638DFA28C2078700E9D8C5 /* grid_fluid_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_fluid_solver3.swift; sourceTree = "<group>"; };
+		E2638DFB28C2078700E9D8C5 /* constant_vector_field2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constant_vector_field2.swift; sourceTree = "<group>"; };
+		E2638DFC28C2078700E9D8C5 /* vector_field2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector_field2.swift; sourceTree = "<group>"; };
+		E2638DFD28C2078700E9D8C5 /* transform2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = transform2.swift; sourceTree = "<group>"; };
+		E2638DFE28C2078700E9D8C5 /* grid_emitter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_emitter2.swift; sourceTree = "<group>"; };
+		E2638DFF28C2078700E9D8C5 /* fdm_linear_system_solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_linear_system_solver.swift; sourceTree = "<group>"; };
+		E2638E0028C2078700E9D8C5 /* grid_fractional_boundary_condition_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_fractional_boundary_condition_solver2.swift; sourceTree = "<group>"; };
+		E2638E0128C2078800E9D8C5 /* grid_point_generator3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_point_generator3.swift; sourceTree = "<group>"; };
+		E2638E0228C2078800E9D8C5 /* intersection_query_engine3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = intersection_query_engine3.swift; sourceTree = "<group>"; };
+		E2638E0328C2078800E9D8C5 /* array_accessor.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = array_accessor.metal; sourceTree = "<group>"; };
+		E2638E0428C2078800E9D8C5 /* fmm_level_set_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fmm_level_set_solver2.swift; sourceTree = "<group>"; };
+		E2638E0528C2078800E9D8C5 /* pic_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = pic_solver3.metal; sourceTree = "<group>"; };
+		E2638E0628C2078800E9D8C5 /* point3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point3.swift; sourceTree = "<group>"; };
+		E2638E0728C2078800E9D8C5 /* quadtree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quadtree.swift; sourceTree = "<group>"; };
+		E2638E0828C2078800E9D8C5 /* physics_helpers.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = physics_helpers.metal; sourceTree = "<group>"; };
+		E2638E0928C2078800E9D8C5 /* fdm_gauss_seidel_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_gauss_seidel_solver3.swift; sourceTree = "<group>"; };
+		E2638E0A28C2078800E9D8C5 /* ray3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ray3.swift; sourceTree = "<group>"; };
+		E2638E0B28C2078900E9D8C5 /* RayMarching.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = RayMarching.metal; sourceTree = "<group>"; };
+		E2638E0C28C2078900E9D8C5 /* scalar_field2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scalar_field2.swift; sourceTree = "<group>"; };
+		E2638E0D28C2078900E9D8C5 /* grid_system_data2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_system_data2.swift; sourceTree = "<group>"; };
+		E2638E0E28C2078900E9D8C5 /* sph_kernels_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_kernels_render.swift; sourceTree = "<group>"; };
+		E2638E0F28C2078900E9D8C5 /* array_samplers1.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = array_samplers1.metal; sourceTree = "<group>"; };
+		E2638E1028C2078900E9D8C5 /* surface_set2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = surface_set2.swift; sourceTree = "<group>"; };
+		E2638E1128C2078900E9D8C5 /* vertex_centered_scalar_grid2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = vertex_centered_scalar_grid2.metal; sourceTree = "<group>"; };
+		E2638E1228C2078900E9D8C5 /* vertex_centered_scalar_grid3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vertex_centered_scalar_grid3.swift; sourceTree = "<group>"; };
+		E2638E1328C2078900E9D8C5 /* particle_emitter_set2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = particle_emitter_set2.swift; sourceTree = "<group>"; };
+		E2638E1428C2078900E9D8C5 /* level_set_liquid_solver2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = level_set_liquid_solver2_render.swift; sourceTree = "<group>"; };
+		E2638E1528C2078A00E9D8C5 /* FluidEngineApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FluidEngineApp.swift; sourceTree = "<group>"; };
+		E2638E1628C2078A00E9D8C5 /* kdtree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kdtree.swift; sourceTree = "<group>"; };
+		E2638E1728C2078A00E9D8C5 /* particle_system_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = particle_system_solver3.swift; sourceTree = "<group>"; };
+		E2638E1828C2078A00E9D8C5 /* level_set_utils.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = level_set_utils.metal; sourceTree = "<group>"; };
+		E2638E1928C2078A00E9D8C5 /* fdm_cg_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_cg_solver3.swift; sourceTree = "<group>"; };
+		E2638E1A28C2078A00E9D8C5 /* pci_sph_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = pci_sph_solver2.metal; sourceTree = "<group>"; };
+		E2638E1B28C2078A00E9D8C5 /* physics_helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = physics_helpers.swift; sourceTree = "<group>"; };
+		E2638E1C28C2078A00E9D8C5 /* svd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = svd.swift; sourceTree = "<group>"; };
+		E2638E1D28C2078A00E9D8C5 /* implicit_surface2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = implicit_surface2.swift; sourceTree = "<group>"; };
+		E2638E1E28C2078A00E9D8C5 /* cubic_semi_lagrangian3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cubic_semi_lagrangian3.swift; sourceTree = "<group>"; };
+		E2638E1F28C2078B00E9D8C5 /* cg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cg.swift; sourceTree = "<group>"; };
+		E2638E2028C2078B00E9D8C5 /* sph_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = sph_solver2.metal; sourceTree = "<group>"; };
+		E2638E2128C2078B00E9D8C5 /* level_set_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = level_set_solver3.swift; sourceTree = "<group>"; };
+		E2638E2228C2078B00E9D8C5 /* grid_fractional_single_phase_pressure_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_fractional_single_phase_pressure_solver2.swift; sourceTree = "<group>"; };
+		E2638E2328C2078B00E9D8C5 /* advection_solvers_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = advection_solvers_render.swift; sourceTree = "<group>"; };
+		E2638E2428C2078B00E9D8C5 /* vector2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector2.swift; sourceTree = "<group>"; };
+		E2638E2528C2078B00E9D8C5 /* fdm_jacobi_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_jacobi_solver3.swift; sourceTree = "<group>"; };
+		E2638E2628C2078B00E9D8C5 /* stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stack.swift; sourceTree = "<group>"; };
+		E2638E2728C2078C00E9D8C5 /* fdm_utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_utils.swift; sourceTree = "<group>"; };
+		E2638E2828C2078C00E9D8C5 /* particle_system_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = particle_system_solver2.metal; sourceTree = "<group>"; };
+		E2638E2928C2078C00E9D8C5 /* advection_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = advection_solver2.swift; sourceTree = "<group>"; };
+		E2638E2A28C2078C00E9D8C5 /* grid_smoke_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_smoke_solver3.swift; sourceTree = "<group>"; };
+		E2638E2B28C2078C00E9D8C5 /* constant_scalar_field3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constant_scalar_field3.swift; sourceTree = "<group>"; };
+		E2638E2C28C2078C00E9D8C5 /* particle_system_solver3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = particle_system_solver3_render.swift; sourceTree = "<group>"; };
+		E2638E2D28C2078C00E9D8C5 /* physics_animation_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = physics_animation_render.swift; sourceTree = "<group>"; };
+		E2638E2E28C2078C00E9D8C5 /* fdm_linear_system2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = fdm_linear_system2.metal; sourceTree = "<group>"; };
+		E2638E2F28C2078C00E9D8C5 /* sph_points_to_implicit2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_points_to_implicit2.swift; sourceTree = "<group>"; };
+		E2638E3028C2078C00E9D8C5 /* sph_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = sph_solver3.metal; sourceTree = "<group>"; };
+		E2638E3128C2078C00E9D8C5 /* surface3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = surface3.swift; sourceTree = "<group>"; };
+		E2638E3228C2078D00E9D8C5 /* cell_centered_scalar_grid3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cell_centered_scalar_grid3.metal; sourceTree = "<group>"; };
+		E2638E3328C2078D00E9D8C5 /* grid_fluid_solver_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_fluid_solver_render.swift; sourceTree = "<group>"; };
+		E2638E3428C2078D00E9D8C5 /* array3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array3.swift; sourceTree = "<group>"; };
+		E2638E3528C2078D00E9D8C5 /* array_samplers2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_samplers2.swift; sourceTree = "<group>"; };
+		E2638E3628C2078D00E9D8C5 /* triangle_mesh3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = triangle_mesh3_render.swift; sourceTree = "<group>"; };
+		E2638E3728C2078D00E9D8C5 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		E2638E3828C2078D00E9D8C5 /* apic_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apic_solver3.swift; sourceTree = "<group>"; };
+		E2638E3928C2078D00E9D8C5 /* zhu_bridson_points_to_implicit3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zhu_bridson_points_to_implicit3.swift; sourceTree = "<group>"; };
+		E2638E3A28C2078D00E9D8C5 /* vertex_centered_vector_grid3_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = vertex_centered_vector_grid3_impl.metal; sourceTree = "<group>"; };
+		E2638E3B28C2078E00E9D8C5 /* volume_grid_emitter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = volume_grid_emitter2.swift; sourceTree = "<group>"; };
+		E2638E3C28C2078E00E9D8C5 /* custom_scalar_field3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = custom_scalar_field3.swift; sourceTree = "<group>"; };
+		E2638E3D28C2078E00E9D8C5 /* grid_smoke_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_smoke_solver3.metal; sourceTree = "<group>"; };
+		E2638E3E28C2078E00E9D8C5 /* intersection_query_engine2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = intersection_query_engine2.swift; sourceTree = "<group>"; };
+		E2638E3F28C2078E00E9D8C5 /* matrix4x4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matrix4x4.swift; sourceTree = "<group>"; };
+		E2638E4028C2078E00E9D8C5 /* sph_system_data2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_system_data2_render.swift; sourceTree = "<group>"; };
+		E2638E4128C2078E00E9D8C5 /* parallel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parallel.swift; sourceTree = "<group>"; };
+		E2638E4228C2078E00E9D8C5 /* point_simple_list_searcher3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_simple_list_searcher3.swift; sourceTree = "<group>"; };
+		E2638E4328C2078E00E9D8C5 /* cell_centered_scalar_grid2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cell_centered_scalar_grid2.swift; sourceTree = "<group>"; };
+		E2638E4428C2078E00E9D8C5 /* fmm_level_set_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fmm_level_set_solver3.swift; sourceTree = "<group>"; };
+		E2638E4528C2078E00E9D8C5 /* point_hash_grid_searcher3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_hash_grid_searcher3.swift; sourceTree = "<group>"; };
+		E2638E4628C2078F00E9D8C5 /* pci_sph_solver2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pci_sph_solver2_render.swift; sourceTree = "<group>"; };
+		E2638E4728C2078F00E9D8C5 /* particle_system_solver2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = particle_system_solver2_render.swift; sourceTree = "<group>"; };
+		E2638E4828C2078F00E9D8C5 /* sph_points_to_implicit3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_points_to_implicit3.swift; sourceTree = "<group>"; };
+		E2638E4928C2078F00E9D8C5 /* vector4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector4.swift; sourceTree = "<group>"; };
+		E2638E4A28C2078F00E9D8C5 /* triangle3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = triangle3.swift; sourceTree = "<group>"; };
+		E2638E4B28C2078F00E9D8C5 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		E2638E4C28C2078F00E9D8C5 /* sph_points_to_implicit2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_points_to_implicit2_render.swift; sourceTree = "<group>"; };
+		E2638E4D28C2078F00E9D8C5 /* grid_backward_euler_diffusion_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_backward_euler_diffusion_solver3.metal; sourceTree = "<group>"; };
+		E2638E4E28C2078F00E9D8C5 /* array_accessor3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = array_accessor3.metal; sourceTree = "<group>"; };
+		E2638E4F28C2079000E9D8C5 /* grid_single_phase_pressure_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_single_phase_pressure_solver2.metal; sourceTree = "<group>"; };
+		E2638E5028C2079000E9D8C5 /* array_accessor1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_accessor1.swift; sourceTree = "<group>"; };
+		E2638E5128C2079000E9D8C5 /* fcc_lattice_point_generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fcc_lattice_point_generator.swift; sourceTree = "<group>"; };
+		E2638E5228C2079000E9D8C5 /* array1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array1.swift; sourceTree = "<group>"; };
+		E2638E5328C2079000E9D8C5 /* pci_sph_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pci_sph_solver3.swift; sourceTree = "<group>"; };
+		E2638E5428C2079000E9D8C5 /* point_parallel_hash_grid_searcher2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_parallel_hash_grid_searcher2.swift; sourceTree = "<group>"; };
+		E2638E5528C2079000E9D8C5 /* points_to_implicit2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = points_to_implicit2.swift; sourceTree = "<group>"; };
+		E2638E5628C2079000E9D8C5 /* box2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = box2.swift; sourceTree = "<group>"; };
+		E2638E5728C2079000E9D8C5 /* fdm_matrix_row_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fdm_matrix_row_type.h; sourceTree = "<group>"; };
+		E2638E5828C2079000E9D8C5 /* iterative_level_set_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iterative_level_set_solver2.swift; sourceTree = "<group>"; };
+		E2638E5928C2079000E9D8C5 /* fdm_iccg_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_iccg_solver3.swift; sourceTree = "<group>"; };
+		E2638E5A28C2079100E9D8C5 /* array_accessor2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = array_accessor2.metal; sourceTree = "<group>"; };
+		E2638E5B28C2079100E9D8C5 /* fdm_jacobi_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = fdm_jacobi_solver3.metal; sourceTree = "<group>"; };
+		E2638E5C28C2079100E9D8C5 /* array_samplers1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_samplers1.swift; sourceTree = "<group>"; };
+		E2638E5D28C2079100E9D8C5 /* iterative_level_set_solvers_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iterative_level_set_solvers_render.swift; sourceTree = "<group>"; };
+		E2638E5E28C2079100E9D8C5 /* rigid_body_collider2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rigid_body_collider2.swift; sourceTree = "<group>"; };
+		E2638E5F28C2079100E9D8C5 /* sph_solver2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_solver2_render.swift; sourceTree = "<group>"; };
+		E2638E6028C2079100E9D8C5 /* vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector3.swift; sourceTree = "<group>"; };
+		E2638E6128C2079100E9D8C5 /* anisotropic_points_to_implicit3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = anisotropic_points_to_implicit3.swift; sourceTree = "<group>"; };
+		E2638E6228C2079100E9D8C5 /* vertex_centered_vector_grid2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = vertex_centered_vector_grid2.metal; sourceTree = "<group>"; };
+		E2638E6328C2079200E9D8C5 /* vertex_centered_vector_grid2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vertex_centered_vector_grid2.swift; sourceTree = "<group>"; };
+		E2638E6428C2079200E9D8C5 /* volume_particle_emitters_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = volume_particle_emitters_render.swift; sourceTree = "<group>"; };
+		E2638E6528C2079200E9D8C5 /* zhu_bridson_points_to_implicit2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zhu_bridson_points_to_implicit2.swift; sourceTree = "<group>"; };
+		E2638E6628C2079200E9D8C5 /* fdm_mg_linear_system2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = fdm_mg_linear_system2.metal; sourceTree = "<group>"; };
+		E2638E6728C2079200E9D8C5 /* animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
+		E2638E6828C2079200E9D8C5 /* particle_emitter3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = particle_emitter3.swift; sourceTree = "<group>"; };
+		E2638E6928C2079200E9D8C5 /* size3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = size3.swift; sourceTree = "<group>"; };
+		E2638E6A28C2079200E9D8C5 /* grid_single_phase_pressure_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_single_phase_pressure_solver3.metal; sourceTree = "<group>"; };
+		E2638E6B28C2079200E9D8C5 /* sph_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_solver3.swift; sourceTree = "<group>"; };
+		E2638E6C28C2079300E9D8C5 /* grid_forward_euler_diffusion_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_forward_euler_diffusion_solver2.metal; sourceTree = "<group>"; };
+		E2638E6D28C2079300E9D8C5 /* implicit_surface_set2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = implicit_surface_set2.swift; sourceTree = "<group>"; };
+		E2638E6E28C2079300E9D8C5 /* sph_kernels2_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = sph_kernels2_impl.metal; sourceTree = "<group>"; };
+		E2638E6F28C2079300E9D8C5 /* fdm_mgpcg_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_mgpcg_solver3.swift; sourceTree = "<group>"; };
+		E2638E7028C2079300E9D8C5 /* sph_solver3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_solver3_render.swift; sourceTree = "<group>"; };
+		E2638E7128C2079300E9D8C5 /* sph_points_to_implicit3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_points_to_implicit3_render.swift; sourceTree = "<group>"; };
+		E2638E7228C2079300E9D8C5 /* scalar_field3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scalar_field3.swift; sourceTree = "<group>"; };
+		E2638E7328C2079300E9D8C5 /* grid_fluid_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_fluid_solver3.metal; sourceTree = "<group>"; };
+		E2638E7428C2079300E9D8C5 /* constant_scalar_field2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constant_scalar_field2.swift; sourceTree = "<group>"; };
+		E2638E7528C2079400E9D8C5 /* fdm_linear_system3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = fdm_linear_system3.metal; sourceTree = "<group>"; };
+		E2638E7628C2079400E9D8C5 /* fdm_linear_system2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_linear_system2.swift; sourceTree = "<group>"; };
+		E2638E7728C2079400E9D8C5 /* constant_scalar_field2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = constant_scalar_field2.metal; sourceTree = "<group>"; };
+		E2638E7828C2079400E9D8C5 /* grid_boundary_condition_solvers_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_boundary_condition_solvers_render.swift; sourceTree = "<group>"; };
+		E2638E7928C2079400E9D8C5 /* level_set_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = level_set_solver2.swift; sourceTree = "<group>"; };
+		E2638E7A28C2079500E9D8C5 /* marching_squares_table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = marching_squares_table.swift; sourceTree = "<group>"; };
+		E2638E7B28C2079500E9D8C5 /* anisotropic_points_to_implicit2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = anisotropic_points_to_implicit2_render.swift; sourceTree = "<group>"; };
+		E2638E7C28C2079600E9D8C5 /* pci_sph_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = pci_sph_solver3.metal; sourceTree = "<group>"; };
+		E2638E7D28C2079600E9D8C5 /* array_samplers.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = array_samplers.metal; sourceTree = "<group>"; };
+		E2638E7E28C2079600E9D8C5 /* sph_kernels2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_kernels2.swift; sourceTree = "<group>"; };
+		E2638E7F28C2079600E9D8C5 /* priority_queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = priority_queue.swift; sourceTree = "<group>"; };
+		E2638E8028C2079600E9D8C5 /* triangle_mesh_to_sdf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = triangle_mesh_to_sdf.swift; sourceTree = "<group>"; };
+		E2638E8128C2079600E9D8C5 /* bounding_box2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bounding_box2.swift; sourceTree = "<group>"; };
+		E2638E8228C2079600E9D8C5 /* array_utils_GPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_utils_GPU.swift; sourceTree = "<group>"; };
+		E2638E8328C2079600E9D8C5 /* plane3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = plane3.swift; sourceTree = "<group>"; };
+		E2638E8428C2079600E9D8C5 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		E2638E8528C2079700E9D8C5 /* vector_field3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector_field3.swift; sourceTree = "<group>"; };
+		E2638E8628C2079700E9D8C5 /* ray2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ray2.swift; sourceTree = "<group>"; };
+		E2638E8728C2079700E9D8C5 /* box3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = box3.swift; sourceTree = "<group>"; };
+		E2638E8828C2079700E9D8C5 /* bvh3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bvh3.swift; sourceTree = "<group>"; };
+		E2638E8928C2079700E9D8C5 /* constant_scalar_field2_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = constant_scalar_field2_impl.metal; sourceTree = "<group>"; };
+		E2638E8A28C2079700E9D8C5 /* grid_single_phase_pressure_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_single_phase_pressure_solver2.swift; sourceTree = "<group>"; };
+		E2638E8B28C2079700E9D8C5 /* octree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = octree.swift; sourceTree = "<group>"; };
+		E2638E8C28C2079700E9D8C5 /* list_query_engine3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = list_query_engine3.swift; sourceTree = "<group>"; };
+		E2638E8D28C2079800E9D8C5 /* grid_backward_euler_diffusion_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_backward_euler_diffusion_solver2.metal; sourceTree = "<group>"; };
+		E2638E8E28C2079800E9D8C5 /* semi_lagrangian2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = semi_lagrangian2.swift; sourceTree = "<group>"; };
+		E2638E8F28C2079800E9D8C5 /* array2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array2.swift; sourceTree = "<group>"; };
+		E2638E9028C2079800E9D8C5 /* sphere3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sphere3.swift; sourceTree = "<group>"; };
+		E2638E9128C2079800E9D8C5 /* fdm_jacobi_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = fdm_jacobi_solver2.metal; sourceTree = "<group>"; };
+		E2638E9228C2079800E9D8C5 /* grid_fluid_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_fluid_solver2.swift; sourceTree = "<group>"; };
+		E2638E9328C2079800E9D8C5 /* vertex_centered_scalar_grid3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = vertex_centered_scalar_grid3.metal; sourceTree = "<group>"; };
+		E2638E9428C2079800E9D8C5 /* volume_grid_emitter3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = volume_grid_emitter3.swift; sourceTree = "<group>"; };
+		E2638E9528C2079800E9D8C5 /* custom_vector_field3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = custom_vector_field3.swift; sourceTree = "<group>"; };
+		E2638E9628C2079900E9D8C5 /* grid_pressure_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_pressure_solver2.swift; sourceTree = "<group>"; };
+		E2638E9728C2079900E9D8C5 /* pic_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = pic_solver2.metal; sourceTree = "<group>"; };
+		E2638E9828C2079900E9D8C5 /* face_centered_grid3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = face_centered_grid3.swift; sourceTree = "<group>"; };
+		E2638E9928C2079900E9D8C5 /* level_set_liquid_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = level_set_liquid_solver2.swift; sourceTree = "<group>"; };
+		E2638E9A28C2079900E9D8C5 /* grid_backward_euler_diffusion_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_backward_euler_diffusion_solver2.swift; sourceTree = "<group>"; };
+		E2638E9B28C2079900E9D8C5 /* grid_single_phase_pressure_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_single_phase_pressure_solver3.swift; sourceTree = "<group>"; };
+		E2638E9C28C2079900E9D8C5 /* grid_emitter_set2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_emitter_set2.swift; sourceTree = "<group>"; };
+		E2638E9D28C2079A00E9D8C5 /* particle_system_data2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = particle_system_data2.swift; sourceTree = "<group>"; };
+		E2638E9E28C2079A00E9D8C5 /* level_set_liquid_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = level_set_liquid_solver3.metal; sourceTree = "<group>"; };
+		E2638E9F28C2079A00E9D8C5 /* fdm_gauss_seidel_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = fdm_gauss_seidel_solver3.metal; sourceTree = "<group>"; };
+		E2638EA028C2079A00E9D8C5 /* cell_centered_vector_grid2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cell_centered_vector_grid2.metal; sourceTree = "<group>"; };
+		E2638EA128C2079A00E9D8C5 /* scalar_grid3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scalar_grid3.swift; sourceTree = "<group>"; };
+		E2638EA228C2079A00E9D8C5 /* sph_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_solver2.swift; sourceTree = "<group>"; };
+		E2638EA328C2079A00E9D8C5 /* fdm_utils.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = fdm_utils.metal; sourceTree = "<group>"; };
+		E2638EA428C2079A00E9D8C5 /* zhu_bridson_points_to_implicit2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zhu_bridson_points_to_implicit2_render.swift; sourceTree = "<group>"; };
+		E2638EA528C2079B00E9D8C5 /* point_generator2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_generator2.swift; sourceTree = "<group>"; };
+		E2638EA628C2079B00E9D8C5 /* point_simple_list_searcher2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_simple_list_searcher2.swift; sourceTree = "<group>"; };
+		E2638EA728C2079B00E9D8C5 /* grid_boundary_condition_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_boundary_condition_solver2.swift; sourceTree = "<group>"; };
+		E2638EA828C2079B00E9D8C5 /* anisotropic_points_to_implicit2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = anisotropic_points_to_implicit2.swift; sourceTree = "<group>"; };
+		E2638EA928C2079B00E9D8C5 /* constant_vector_field3_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = constant_vector_field3_impl.metal; sourceTree = "<group>"; };
+		E2638EAA28C2079B00E9D8C5 /* face_centered_grid2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = face_centered_grid2.swift; sourceTree = "<group>"; };
+		E2638EAB28C2079B00E9D8C5 /* color_utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = color_utils.swift; sourceTree = "<group>"; };
+		E2638EAC28C2079B00E9D8C5 /* point_hash_grid_searcher2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_hash_grid_searcher2.swift; sourceTree = "<group>"; };
+		E2638EAD28C2079C00E9D8C5 /* point2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point2.swift; sourceTree = "<group>"; };
+		E2638EAE28C2079C00E9D8C5 /* level_set_liquid_solver3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = level_set_liquid_solver3_render.swift; sourceTree = "<group>"; };
+		E2638EAF28C2079C00E9D8C5 /* point_particle_emitter3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_particle_emitter3.swift; sourceTree = "<group>"; };
+		E2638EB028C2079C00E9D8C5 /* sph_kernels3_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = sph_kernels3_impl.metal; sourceTree = "<group>"; };
+		E2638EB128C2079C00E9D8C5 /* fdm_jacobi_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_jacobi_solver2.swift; sourceTree = "<group>"; };
+		E2638EB228C2079C00E9D8C5 /* grid_blocked_boundary_condition_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_blocked_boundary_condition_solver2.swift; sourceTree = "<group>"; };
+		E2638EB328C2079C00E9D8C5 /* grid_blocked_boundary_condition_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_blocked_boundary_condition_solver3.swift; sourceTree = "<group>"; };
+		E2638EB528C2079E00E9D8C5 /* spherical_points_to_implicit2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spherical_points_to_implicit2.swift; sourceTree = "<group>"; };
+		E2638EB628C2079E00E9D8C5 /* plane2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = plane2.swift; sourceTree = "<group>"; };
+		E2638EB728C2079E00E9D8C5 /* surface2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = surface2.swift; sourceTree = "<group>"; };
+		E2638EB828C2079E00E9D8C5 /* upwind_level_set_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = upwind_level_set_solver3.swift; sourceTree = "<group>"; };
+		E2638EB928C2079E00E9D8C5 /* spherical_points_to_implicit3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spherical_points_to_implicit3_render.swift; sourceTree = "<group>"; };
+		E2638EBA28C2079E00E9D8C5 /* vector_grid2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector_grid2.swift; sourceTree = "<group>"; };
+		E2638EBB28C2079E00E9D8C5 /* particle_system_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = particle_system_solver3.metal; sourceTree = "<group>"; };
+		E2638EBC28C2079E00E9D8C5 /* pde.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pde.swift; sourceTree = "<group>"; };
+		E2638EBD28C2079E00E9D8C5 /* cell_centered_vector_grid3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cell_centered_vector_grid3.swift; sourceTree = "<group>"; };
+		E2638EBE28C2079E00E9D8C5 /* fdm_iccg_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_iccg_solver2.swift; sourceTree = "<group>"; };
+		E2638EBF28C2079F00E9D8C5 /* cell_centered_vector_grid3_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cell_centered_vector_grid3_impl.metal; sourceTree = "<group>"; };
+		E2638EC028C2079F00E9D8C5 /* anisotropic_points_to_implicit3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = anisotropic_points_to_implicit3_render.swift; sourceTree = "<group>"; };
+		E2638EC128C2079F00E9D8C5 /* eno_level_set_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eno_level_set_solver3.swift; sourceTree = "<group>"; };
+		E2638EC228C2079F00E9D8C5 /* math_utils.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = math_utils.metal; sourceTree = "<group>"; };
+		E2638EC328C2079F00E9D8C5 /* custom_scalar_field2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = custom_scalar_field2.swift; sourceTree = "<group>"; };
+		E2638EC428C2079F00E9D8C5 /* point_neighbor_searcher3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_neighbor_searcher3.swift; sourceTree = "<group>"; };
+		E2638EC528C2079F00E9D8C5 /* rigid_body_collider3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rigid_body_collider3.swift; sourceTree = "<group>"; };
+		E2638EC628C207A000E9D8C5 /* sph_system_data2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_system_data2.swift; sourceTree = "<group>"; };
+		E2638EC728C207A000E9D8C5 /* apic_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = apic_solver2.metal; sourceTree = "<group>"; };
+		E2638EC828C207A000E9D8C5 /* hello_fluid_sim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hello_fluid_sim.swift; sourceTree = "<group>"; };
+		E2638EC928C207A000E9D8C5 /* points_to_implicit3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = points_to_implicit3.swift; sourceTree = "<group>"; };
+		E2638ECA28C207A000E9D8C5 /* particle_emitter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = particle_emitter2.swift; sourceTree = "<group>"; };
+		E2638ECB28C207A000E9D8C5 /* face_centered_grid2_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = face_centered_grid2_impl.metal; sourceTree = "<group>"; };
+		E2638ECC28C207A000E9D8C5 /* math_utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = math_utils.swift; sourceTree = "<group>"; };
+		E2638ECD28C207A000E9D8C5 /* sph_system_data3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_system_data3.swift; sourceTree = "<group>"; };
+		E2638ECE28C207A000E9D8C5 /* fdm_mgpcg_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_mgpcg_solver2.swift; sourceTree = "<group>"; };
+		E2638ECF28C207A000E9D8C5 /* array_samplers3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = array_samplers3.metal; sourceTree = "<group>"; };
+		E2638ED028C207A100E9D8C5 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		E2638ED128C207A100E9D8C5 /* cell_centered_vector_grid2_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cell_centered_vector_grid2_impl.metal; sourceTree = "<group>"; };
+		E2638ED228C207A100E9D8C5 /* cell_centered_scalar_grid2_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cell_centered_scalar_grid2_impl.metal; sourceTree = "<group>"; };
+		E2638ED328C207A100E9D8C5 /* particle_emitter_set3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = particle_emitter_set3.swift; sourceTree = "<group>"; };
+		E2638ED428C207A100E9D8C5 /* fdm_mg_linear_system3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = fdm_mg_linear_system3.metal; sourceTree = "<group>"; };
+		E2638ED528C207A100E9D8C5 /* grid.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid.metal; sourceTree = "<group>"; };
+		E2638ED628C207A100E9D8C5 /* fdm_mg_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_mg_solver3.swift; sourceTree = "<group>"; };
+		E2638ED728C207A200E9D8C5 /* array_utils_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_utils_render.swift; sourceTree = "<group>"; };
+		E2638ED828C207A200E9D8C5 /* fdm_gauss_seidel_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = fdm_gauss_seidel_solver2.metal; sourceTree = "<group>"; };
+		E2638ED928C207A200E9D8C5 /* blas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = blas.swift; sourceTree = "<group>"; };
+		E2638EDA28C207A200E9D8C5 /* cubic_semi_lagrangian2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cubic_semi_lagrangian2.swift; sourceTree = "<group>"; };
+		E2638EDB28C207A200E9D8C5 /* cylinder3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cylinder3.swift; sourceTree = "<group>"; };
+		E2638EDC28C207A200E9D8C5 /* implicit_surface3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = implicit_surface3.swift; sourceTree = "<group>"; };
+		E2638EDD28C207A200E9D8C5 /* sph_kernels3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = sph_kernels3.metal; sourceTree = "<group>"; };
+		E2638EDE28C207A200E9D8C5 /* constant_vector_field3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constant_vector_field3.swift; sourceTree = "<group>"; };
+		E2638EDF28C207A200E9D8C5 /* flip_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flip_solver3.swift; sourceTree = "<group>"; };
+		E2638EE028C207A200E9D8C5 /* animation_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animation_render.swift; sourceTree = "<group>"; };
+		E2638EE128C207A300E9D8C5 /* grid_smoke_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_smoke_solver2.swift; sourceTree = "<group>"; };
+		E2638EE228C207A300E9D8C5 /* constant_scalar_field3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = constant_scalar_field3.metal; sourceTree = "<group>"; };
+		E2638EE328C207A300E9D8C5 /* flip_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = flip_solver3.metal; sourceTree = "<group>"; };
+		E2638EE428C207A300E9D8C5 /* apic_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apic_solver2.swift; sourceTree = "<group>"; };
+		E2638EE528C207A300E9D8C5 /* grid2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid2.swift; sourceTree = "<group>"; };
+		E2638EE628C207A300E9D8C5 /* advection_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = advection_solver3.swift; sourceTree = "<group>"; };
+		E2638EE728C207A300E9D8C5 /* grid_diffusion_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_diffusion_solver2.swift; sourceTree = "<group>"; };
+		E2638EE828C207A400E9D8C5 /* grid_diffusion_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_diffusion_solver3.swift; sourceTree = "<group>"; };
+		E2638EE928C207A400E9D8C5 /* grid_pressure_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_pressure_solver3.swift; sourceTree = "<group>"; };
+		E2638EEA28C207A400E9D8C5 /* grid_fractional_boundary_condition_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_fractional_boundary_condition_solver3.swift; sourceTree = "<group>"; };
+		E2638EEB28C207A400E9D8C5 /* level_set_liquid_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = level_set_liquid_solver2.metal; sourceTree = "<group>"; };
+		E2638EEC28C207A400E9D8C5 /* constant_vector_field2_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = constant_vector_field2_impl.metal; sourceTree = "<group>"; };
+		E2638EED28C207A400E9D8C5 /* quaternion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quaternion.swift; sourceTree = "<group>"; };
+		E2638EEE28C207A400E9D8C5 /* transform3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = transform3.swift; sourceTree = "<group>"; };
+		E2638EEF28C207A500E9D8C5 /* eno_level_set_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eno_level_set_solver2.swift; sourceTree = "<group>"; };
+		E2638EF028C207A500E9D8C5 /* particle_system_data3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = particle_system_data3.swift; sourceTree = "<group>"; };
+		E2638EF128C207A500E9D8C5 /* pic_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pic_solver3.swift; sourceTree = "<group>"; };
+		E2638EF228C207A500E9D8C5 /* volume_particle_emitter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = volume_particle_emitter2.swift; sourceTree = "<group>"; };
+		E2638EF328C207A600E9D8C5 /* cell_centered_vector_grid2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cell_centered_vector_grid2.swift; sourceTree = "<group>"; };
+		E2638EF428C207A600E9D8C5 /* face_centered_grid2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = face_centered_grid2.metal; sourceTree = "<group>"; };
+		E2638EF528C207A600E9D8C5 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		E2638EF628C207A600E9D8C5 /* collocated_vector_grid2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collocated_vector_grid2.swift; sourceTree = "<group>"; };
+		E2638EF728C207A700E9D8C5 /* grid_fractional_single_phase_pressure_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_fractional_single_phase_pressure_solver3.metal; sourceTree = "<group>"; };
+		E2638EF928C207A700E9D8C5 /* grid_system_data3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_system_data3.swift; sourceTree = "<group>"; };
+		E2638EFA28C207A700E9D8C5 /* array_samplers2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = array_samplers2.metal; sourceTree = "<group>"; };
+		E2638EFB28C207A700E9D8C5 /* nearest_neighbor_query_engine3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearest_neighbor_query_engine3.swift; sourceTree = "<group>"; };
+		E2638EFC28C207A700E9D8C5 /* face_centered_grid3_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = face_centered_grid3_impl.metal; sourceTree = "<group>"; };
+		E2638EFD28C207A700E9D8C5 /* sph_kernels2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = sph_kernels2.metal; sourceTree = "<group>"; };
+		E2638EFE28C207A800E9D8C5 /* spherical_points_to_implicit3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spherical_points_to_implicit3.swift; sourceTree = "<group>"; };
+		E2638EFF28C207A800E9D8C5 /* grid3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid3.swift; sourceTree = "<group>"; };
+		E2638F0028C207A800E9D8C5 /* grid_emitter3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_emitter3.swift; sourceTree = "<group>"; };
+		E2638F0128C207A800E9D8C5 /* constant_vector_field3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = constant_vector_field3.metal; sourceTree = "<group>"; };
+		E2638F0228C207A800E9D8C5 /* bcc_lattice_point_generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bcc_lattice_point_generator.swift; sourceTree = "<group>"; };
+		E2638F0328C207A800E9D8C5 /* cell_centered_scalar_grid3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cell_centered_scalar_grid3.swift; sourceTree = "<group>"; };
+		E2638F0428C207A800E9D8C5 /* fdm_mg_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_mg_solver2.swift; sourceTree = "<group>"; };
+		E2638F0528C207A800E9D8C5 /* physics_animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = physics_animation.swift; sourceTree = "<group>"; };
+		E2638F0628C207A800E9D8C5 /* grid_forward_euler_diffusion_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_forward_euler_diffusion_solver3.swift; sourceTree = "<group>"; };
+		E2638F0828C207A900E9D8C5 /* pic_solver3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pic_solver3_render.swift; sourceTree = "<group>"; };
+		E2638F0928C207A900E9D8C5 /* collider_set2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collider_set2.swift; sourceTree = "<group>"; };
+		E2638F0A28C207A900E9D8C5 /* array_accessor2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_accessor2.swift; sourceTree = "<group>"; };
+		E2638F0B28C207A900E9D8C5 /* custom_implicit_surface2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = custom_implicit_surface2.swift; sourceTree = "<group>"; };
+		E2638F0C28C207A900E9D8C5 /* grid_point_generator2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_point_generator2.swift; sourceTree = "<group>"; };
+		E2638F0D28C207A900E9D8C5 /* marching_cubes_table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = marching_cubes_table.swift; sourceTree = "<group>"; };
+		E2638F0E28C207AA00E9D8C5 /* point_particle_emitter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_particle_emitter2.swift; sourceTree = "<group>"; };
+		E2638F0F28C207AA00E9D8C5 /* spherical_points_to_implicit2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spherical_points_to_implicit2_render.swift; sourceTree = "<group>"; };
+		E2638F1028C207AA00E9D8C5 /* sph_system_data3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sph_system_data3_render.swift; sourceTree = "<group>"; };
+		E2638F1128C207AA00E9D8C5 /* field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = field.swift; sourceTree = "<group>"; };
+		E2638F1228C207AA00E9D8C5 /* level_set_liquid_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = level_set_liquid_solver3.swift; sourceTree = "<group>"; };
+		E2638F1328C207AA00E9D8C5 /* vertex_centered_scalar_grid2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vertex_centered_scalar_grid2.swift; sourceTree = "<group>"; };
+		E2638F1428C207AA00E9D8C5 /* mg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mg.swift; sourceTree = "<group>"; };
+		E2638F1528C207AA00E9D8C5 /* implicit_surface_set3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = implicit_surface_set3.swift; sourceTree = "<group>"; };
+		E2638F1628C207AA00E9D8C5 /* Emitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		E2638F1728C207AB00E9D8C5 /* fdm_cg_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_cg_solver2.swift; sourceTree = "<group>"; };
+		E2638F1828C207AB00E9D8C5 /* grid_diffusion_solvers_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_diffusion_solvers_render.swift; sourceTree = "<group>"; };
+		E2638F1928C207AB00E9D8C5 /* vertex_centered_vector_grid2_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = vertex_centered_vector_grid2_impl.metal; sourceTree = "<group>"; };
+		E2638F1A28C207AB00E9D8C5 /* fmm_level_set_solvers_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fmm_level_set_solvers_render.swift; sourceTree = "<group>"; };
+		E2638F1B28C207AB00E9D8C5 /* point_parallel_hash_grid_searcher3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_parallel_hash_grid_searcher3.swift; sourceTree = "<group>"; };
+		E2638F1C28C207AB00E9D8C5 /* sphere2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sphere2.swift; sourceTree = "<group>"; };
+		E2638F1D28C207AB00E9D8C5 /* flip_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flip_solver2.swift; sourceTree = "<group>"; };
+		E2638F1E28C207AC00E9D8C5 /* implicit_triangle_mesh3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = implicit_triangle_mesh3.swift; sourceTree = "<group>"; };
+		E2638F1F28C207AC00E9D8C5 /* volume_particle_emitter3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = volume_particle_emitter3.swift; sourceTree = "<group>"; };
+		E2638F2028C207AC00E9D8C5 /* constant_scalar_field3_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = constant_scalar_field3_impl.metal; sourceTree = "<group>"; };
+		E2638F2128C207AC00E9D8C5 /* zhu_bridson_points_to_implicit3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zhu_bridson_points_to_implicit3_render.swift; sourceTree = "<group>"; };
+		E2638F2228C207AC00E9D8C5 /* bvh2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bvh2.swift; sourceTree = "<group>"; };
+		E2638F2328C207AC00E9D8C5 /* apic_solver3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apic_solver3_render.swift; sourceTree = "<group>"; };
+		E2638F2428C207AC00E9D8C5 /* apic_solver2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apic_solver2_render.swift; sourceTree = "<group>"; };
+		E2638F2528C207AC00E9D8C5 /* vertex_centered_vector_grid3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vertex_centered_vector_grid3.swift; sourceTree = "<group>"; };
+		E2638F2628C207AC00E9D8C5 /* grid_fractional_single_phase_pressure_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_fractional_single_phase_pressure_solver2.metal; sourceTree = "<group>"; };
+		E2638F2728C207AD00E9D8C5 /* semi_lagrangian3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = semi_lagrangian3.swift; sourceTree = "<group>"; };
+		E2638F2828C207AD00E9D8C5 /* line_shader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = line_shader.metal; sourceTree = "<group>"; };
+		E2638F2928C207AD00E9D8C5 /* collocated_vector_grid3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collocated_vector_grid3.swift; sourceTree = "<group>"; };
+		E2638F2A28C207AD00E9D8C5 /* grid_fluid_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_fluid_solver2.metal; sourceTree = "<group>"; };
+		E2638F2B28C207AD00E9D8C5 /* collider2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collider2.swift; sourceTree = "<group>"; };
+		E2638F2C28C207AD00E9D8C5 /* point_shader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = point_shader.metal; sourceTree = "<group>"; };
+		E2638F2D28C207AD00E9D8C5 /* fdm_linear_system3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_linear_system3.swift; sourceTree = "<group>"; };
+		E2638F2E28C207AE00E9D8C5 /* bounding_box3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bounding_box3.swift; sourceTree = "<group>"; };
+		E2638F2F28C207AE00E9D8C5 /* surface_set3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = surface_set3.swift; sourceTree = "<group>"; };
+		E2638F3028C207AE00E9D8C5 /* triangle_point_generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = triangle_point_generator.swift; sourceTree = "<group>"; };
+		E2638F3128C207AE00E9D8C5 /* cell_centered_vector_grid3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cell_centered_vector_grid3.metal; sourceTree = "<group>"; };
+		E2638F3228C207AE00E9D8C5 /* vertex_centered_vector_grid3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = vertex_centered_vector_grid3.metal; sourceTree = "<group>"; };
+		E2638F3328C207AE00E9D8C5 /* heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = heap.swift; sourceTree = "<group>"; };
+		E2638F3428C207AE00E9D8C5 /* list_query_engine2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = list_query_engine2.swift; sourceTree = "<group>"; };
+		E2638F3528C207AE00E9D8C5 /* cell_centered_scalar_grid3_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cell_centered_scalar_grid3_impl.metal; sourceTree = "<group>"; };
+		E2638F3628C207AF00E9D8C5 /* fdm_mg_linear_system2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_mg_linear_system2.swift; sourceTree = "<group>"; };
+		E2638F3728C207AF00E9D8C5 /* fdm_gauss_seidel_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_gauss_seidel_solver2.swift; sourceTree = "<group>"; };
+		E2638F3828C207AF00E9D8C5 /* custom_vector_field2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = custom_vector_field2.swift; sourceTree = "<group>"; };
+		E2638F3928C207AF00E9D8C5 /* constants.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = constants.metal; sourceTree = "<group>"; };
+		E2638F3A28C207AF00E9D8C5 /* collider3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collider3.swift; sourceTree = "<group>"; };
+		E2638F3B28C207AF00E9D8C5 /* grid_backward_euler_diffusion_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_backward_euler_diffusion_solver3.swift; sourceTree = "<group>"; };
+		E2638F3C28C207AF00E9D8C5 /* grid_smoke_solver_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_smoke_solver_render.swift; sourceTree = "<group>"; };
+		E2638F3D28C207B000E9D8C5 /* cell_centered_scalar_grid2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cell_centered_scalar_grid2.metal; sourceTree = "<group>"; };
+		E2638F3E28C207B000E9D8C5 /* grid_forward_euler_diffusion_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_forward_euler_diffusion_solver2.swift; sourceTree = "<group>"; };
+		E2638F3F28C207B000E9D8C5 /* Particles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Particles.swift; sourceTree = "<group>"; };
+		E2638F4028C207B000E9D8C5 /* grid_emitter_set3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_emitter_set3.swift; sourceTree = "<group>"; };
+		E2638F4128C207B000E9D8C5 /* pci_sph_solver3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pci_sph_solver3_render.swift; sourceTree = "<group>"; };
+		E2638F4228C207B000E9D8C5 /* point_hash_grid_searchers_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_hash_grid_searchers_render.swift; sourceTree = "<group>"; };
+		E2638F4328C207B000E9D8C5 /* array_accessor3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_accessor3.swift; sourceTree = "<group>"; };
+		E2638F4428C207B100E9D8C5 /* samplers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = samplers.swift; sourceTree = "<group>"; };
+		E2638F4528C207B100E9D8C5 /* collider_set3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collider_set3.swift; sourceTree = "<group>"; };
+		E2638F4628C207B100E9D8C5 /* grid_fractional_single_phase_pressure_solver3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = grid_fractional_single_phase_pressure_solver3.swift; sourceTree = "<group>"; };
+		E2638F4728C207B100E9D8C5 /* grid_forward_euler_diffusion_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_forward_euler_diffusion_solver3.metal; sourceTree = "<group>"; };
+		E2638F4828C207B100E9D8C5 /* marching_cubes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = marching_cubes.swift; sourceTree = "<group>"; };
+		E2638F4928C207B100E9D8C5 /* pic_solver2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pic_solver2_render.swift; sourceTree = "<group>"; };
+		E2638F4A28C207B200E9D8C5 /* constant_vector_field2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = constant_vector_field2.metal; sourceTree = "<group>"; };
+		E2638F4B28C207B200E9D8C5 /* triangle_mesh_to_sdf_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = triangle_mesh_to_sdf_render.swift; sourceTree = "<group>"; };
+		E2638F4C28C207B200E9D8C5 /* vector_grid3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector_grid3.swift; sourceTree = "<group>"; };
+		E2638F4D28C207B200E9D8C5 /* apic_solver3.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = apic_solver3.metal; sourceTree = "<group>"; };
+		E2638F4E28C207B200E9D8C5 /* field_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = field_render.swift; sourceTree = "<group>"; };
+		E2638F4F28C207B300E9D8C5 /* vertex_centered_scalar_grid2_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = vertex_centered_scalar_grid2_impl.metal; sourceTree = "<group>"; };
+		E2638F5028C207B300E9D8C5 /* Particle.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Particle.metal; sourceTree = "<group>"; };
+		E2638F5128C207B300E9D8C5 /* flip_solver3_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flip_solver3_render.swift; sourceTree = "<group>"; };
+		E2638F5228C207B300E9D8C5 /* surface_to_implicit3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = surface_to_implicit3.swift; sourceTree = "<group>"; };
+		E2638F5328C207B300E9D8C5 /* array_utils_CPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_utils_CPU.swift; sourceTree = "<group>"; };
+		E2638F5428C207B300E9D8C5 /* level_set_utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = level_set_utils.swift; sourceTree = "<group>"; };
+		E2638F5528C207B300E9D8C5 /* pic_solver2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pic_solver2.swift; sourceTree = "<group>"; };
+		E2638F5628C207B300E9D8C5 /* MathLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
+		E2638F5728C207B400E9D8C5 /* triangle_mesh3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = triangle_mesh3.swift; sourceTree = "<group>"; };
+		E2638F5828C207B400E9D8C5 /* grid_smoke_solver2.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = grid_smoke_solver2.metal; sourceTree = "<group>"; };
+		E2638F5928C207B400E9D8C5 /* point_generator3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_generator3.swift; sourceTree = "<group>"; };
+		E2638F5A28C207B400E9D8C5 /* point_neighbor_searcher2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = point_neighbor_searcher2.swift; sourceTree = "<group>"; };
+		E2638F5B28C207B400E9D8C5 /* matrix2x2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matrix2x2.swift; sourceTree = "<group>"; };
+		E2638F5C28C207B400E9D8C5 /* vertex_centered_scalar_grid3_impl.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = vertex_centered_scalar_grid3_impl.metal; sourceTree = "<group>"; };
+		E2638F5D28C207B400E9D8C5 /* flip_solver2_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flip_solver2_render.swift; sourceTree = "<group>"; };
+		E2638F5E28C207B500E9D8C5 /* custom_implicit_surface3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = custom_implicit_surface3.swift; sourceTree = "<group>"; };
+		E2638F5F28C207B500E9D8C5 /* array_samplers3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = array_samplers3.swift; sourceTree = "<group>"; };
+		E2638F6028C207B500E9D8C5 /* marching_cubes_render.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = marching_cubes_render.swift; sourceTree = "<group>"; };
+		E2638F6128C207B500E9D8C5 /* fdm_mg_linear_system3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fdm_mg_linear_system3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +789,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E26062A728C395B9000DDBEB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E26062AC28C395FD000DDBEB /* bunny.obj */,
+				E26062B228C395FD000DDBEB /* cube.obj */,
+				E26062AD28C395FD000DDBEB /* cup.obj */,
+				E26062AB28C395FD000DDBEB /* kCubeTriMesh3x3x3As.obj */,
+				E26062B128C395FD000DDBEB /* kSphereTriMesh5x5.obj */,
+				E26062AE28C395FD000DDBEB /* Textures */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E26062A828C395EB000DDBEB /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				E26062A928C395EB000DDBEB /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		E26062AE28C395FD000DDBEB /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				E26062AF28C395FD000DDBEB /* snowflake.png */,
+				E26062B028C395FD000DDBEB /* fire.png */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
 		E2638DCE28C2071400E9D8C5 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +838,383 @@
 		E2638DD928C2071400E9D8C5 /* Fluid Engine */ = {
 			isa = PBXGroup;
 			children = (
-				E2638DDA28C2071400E9D8C5 /* Fluid_EngineApp.swift */,
-				E2638DDC28C2071400E9D8C5 /* ContentView.swift */,
 				E2638DDE28C2071500E9D8C5 /* Assets.xcassets */,
+				E26062A828C395EB000DDBEB /* Base.lproj */,
+				E26062A728C395B9000DDBEB /* Resources */,
+				E2638E1528C2078A00E9D8C5 /* FluidEngineApp.swift */,
+				E2638DDC28C2071400E9D8C5 /* ContentView.swift */,
+				E2638E3728C2078D00E9D8C5 /* Renderable.swift */,
+				E2638E8428C2079600E9D8C5 /* Renderer.swift */,
+				E2638E2928C2078C00E9D8C5 /* advection_solver2.swift */,
+				E2638EE628C207A300E9D8C5 /* advection_solver3.swift */,
+				E2638E2328C2078B00E9D8C5 /* advection_solvers_render.swift */,
+				E2638EE028C207A200E9D8C5 /* animation_render.swift */,
+				E2638E6728C2079200E9D8C5 /* animation.swift */,
+				E2638E7B28C2079500E9D8C5 /* anisotropic_points_to_implicit2_render.swift */,
+				E2638EA828C2079B00E9D8C5 /* anisotropic_points_to_implicit2.swift */,
+				E2638EC028C2079F00E9D8C5 /* anisotropic_points_to_implicit3_render.swift */,
+				E2638E6128C2079100E9D8C5 /* anisotropic_points_to_implicit3.swift */,
+				E2638F2428C207AC00E9D8C5 /* apic_solver2_render.swift */,
+				E2638EC728C207A000E9D8C5 /* apic_solver2.metal */,
+				E2638EE428C207A300E9D8C5 /* apic_solver2.swift */,
+				E2638F2328C207AC00E9D8C5 /* apic_solver3_render.swift */,
+				E2638F4D28C207B200E9D8C5 /* apic_solver3.metal */,
+				E2638E3828C2078D00E9D8C5 /* apic_solver3.swift */,
+				E2638E0328C2078800E9D8C5 /* array_accessor.metal */,
+				E2638DF828C2078700E9D8C5 /* array_accessor1.metal */,
+				E2638E5028C2079000E9D8C5 /* array_accessor1.swift */,
+				E2638E5A28C2079100E9D8C5 /* array_accessor2.metal */,
+				E2638F0A28C207A900E9D8C5 /* array_accessor2.swift */,
+				E2638E4E28C2078F00E9D8C5 /* array_accessor3.metal */,
+				E2638F4328C207B000E9D8C5 /* array_accessor3.swift */,
+				E2638E7D28C2079600E9D8C5 /* array_samplers.metal */,
+				E2638E0F28C2078900E9D8C5 /* array_samplers1.metal */,
+				E2638E5C28C2079100E9D8C5 /* array_samplers1.swift */,
+				E2638EFA28C207A700E9D8C5 /* array_samplers2.metal */,
+				E2638E3528C2078D00E9D8C5 /* array_samplers2.swift */,
+				E2638ECF28C207A000E9D8C5 /* array_samplers3.metal */,
+				E2638F5F28C207B500E9D8C5 /* array_samplers3.swift */,
+				E2638F5328C207B300E9D8C5 /* array_utils_CPU.swift */,
+				E2638E8228C2079600E9D8C5 /* array_utils_GPU.swift */,
+				E2638ED728C207A200E9D8C5 /* array_utils_render.swift */,
+				E2638DF128C2078600E9D8C5 /* array_utils.metal */,
+				E2638E5228C2079000E9D8C5 /* array1.swift */,
+				E2638E8F28C2079800E9D8C5 /* array2.swift */,
+				E2638E3428C2078D00E9D8C5 /* array3.swift */,
+				E2638F0228C207A800E9D8C5 /* bcc_lattice_point_generator.swift */,
+				E2638ED928C207A200E9D8C5 /* blas.swift */,
+				E2638E8128C2079600E9D8C5 /* bounding_box2.swift */,
+				E2638F2E28C207AE00E9D8C5 /* bounding_box3.swift */,
+				E2638E5628C2079000E9D8C5 /* box2.swift */,
+				E2638E8728C2079700E9D8C5 /* box3.swift */,
+				E2638F2228C207AC00E9D8C5 /* bvh2.swift */,
+				E2638E8828C2079700E9D8C5 /* bvh3.swift */,
+				E2638ED228C207A100E9D8C5 /* cell_centered_scalar_grid2_impl.metal */,
+				E2638F3D28C207B000E9D8C5 /* cell_centered_scalar_grid2.metal */,
+				E2638E4328C2078E00E9D8C5 /* cell_centered_scalar_grid2.swift */,
+				E2638F3528C207AE00E9D8C5 /* cell_centered_scalar_grid3_impl.metal */,
+				E2638E3228C2078D00E9D8C5 /* cell_centered_scalar_grid3.metal */,
+				E2638F0328C207A800E9D8C5 /* cell_centered_scalar_grid3.swift */,
+				E2638ED128C207A100E9D8C5 /* cell_centered_vector_grid2_impl.metal */,
+				E2638EA028C2079A00E9D8C5 /* cell_centered_vector_grid2.metal */,
+				E2638EF328C207A600E9D8C5 /* cell_centered_vector_grid2.swift */,
+				E2638EBF28C2079F00E9D8C5 /* cell_centered_vector_grid3_impl.metal */,
+				E2638F3128C207AE00E9D8C5 /* cell_centered_vector_grid3.metal */,
+				E2638EBD28C2079E00E9D8C5 /* cell_centered_vector_grid3.swift */,
+				E2638E1F28C2078B00E9D8C5 /* cg.swift */,
+				E2638F0928C207A900E9D8C5 /* collider_set2.swift */,
+				E2638F4528C207B100E9D8C5 /* collider_set3.swift */,
+				E2638F2B28C207AD00E9D8C5 /* collider2.swift */,
+				E2638F3A28C207AF00E9D8C5 /* collider3.swift */,
+				E2638EF628C207A600E9D8C5 /* collocated_vector_grid2.swift */,
+				E2638F2928C207AD00E9D8C5 /* collocated_vector_grid3.swift */,
+				E2638EAB28C2079B00E9D8C5 /* color_utils.swift */,
+				E2638E8928C2079700E9D8C5 /* constant_scalar_field2_impl.metal */,
+				E2638E7728C2079400E9D8C5 /* constant_scalar_field2.metal */,
+				E2638E7428C2079300E9D8C5 /* constant_scalar_field2.swift */,
+				E2638F2028C207AC00E9D8C5 /* constant_scalar_field3_impl.metal */,
+				E2638EE228C207A300E9D8C5 /* constant_scalar_field3.metal */,
+				E2638E2B28C2078C00E9D8C5 /* constant_scalar_field3.swift */,
+				E2638EEC28C207A400E9D8C5 /* constant_vector_field2_impl.metal */,
+				E2638F4A28C207B200E9D8C5 /* constant_vector_field2.metal */,
+				E2638DFB28C2078700E9D8C5 /* constant_vector_field2.swift */,
+				E2638EA928C2079B00E9D8C5 /* constant_vector_field3_impl.metal */,
+				E2638F0128C207A800E9D8C5 /* constant_vector_field3.metal */,
+				E2638EDE28C207A200E9D8C5 /* constant_vector_field3.swift */,
+				E2638F3928C207AF00E9D8C5 /* constants.metal */,
+				E2638EF528C207A600E9D8C5 /* constants.swift */,
+				E2638EDA28C207A200E9D8C5 /* cubic_semi_lagrangian2.swift */,
+				E2638E1E28C2078A00E9D8C5 /* cubic_semi_lagrangian3.swift */,
+				E2638F0B28C207A900E9D8C5 /* custom_implicit_surface2.swift */,
+				E2638F5E28C207B500E9D8C5 /* custom_implicit_surface3.swift */,
+				E2638EC328C2079F00E9D8C5 /* custom_scalar_field2.swift */,
+				E2638E3C28C2078E00E9D8C5 /* custom_scalar_field3.swift */,
+				E2638F3828C207AF00E9D8C5 /* custom_vector_field2.swift */,
+				E2638E9528C2079800E9D8C5 /* custom_vector_field3.swift */,
+				E2638EDB28C207A200E9D8C5 /* cylinder3.swift */,
+				E2638F1628C207AA00E9D8C5 /* Emitter.swift */,
+				E2638EEF28C207A500E9D8C5 /* eno_level_set_solver2.swift */,
+				E2638EC128C2079F00E9D8C5 /* eno_level_set_solver3.swift */,
+				E2638ECB28C207A000E9D8C5 /* face_centered_grid2_impl.metal */,
+				E2638EF428C207A600E9D8C5 /* face_centered_grid2.metal */,
+				E2638EAA28C2079B00E9D8C5 /* face_centered_grid2.swift */,
+				E2638EFC28C207A700E9D8C5 /* face_centered_grid3_impl.metal */,
+				E2638DEC28C2078500E9D8C5 /* face_centered_grid3.metal */,
+				E2638E9828C2079900E9D8C5 /* face_centered_grid3.swift */,
+				E2638E5128C2079000E9D8C5 /* fcc_lattice_point_generator.swift */,
+				E2638F1728C207AB00E9D8C5 /* fdm_cg_solver2.swift */,
+				E2638E1928C2078A00E9D8C5 /* fdm_cg_solver3.swift */,
+				E2638ED828C207A200E9D8C5 /* fdm_gauss_seidel_solver2.metal */,
+				E2638F3728C207AF00E9D8C5 /* fdm_gauss_seidel_solver2.swift */,
+				E2638E9F28C2079A00E9D8C5 /* fdm_gauss_seidel_solver3.metal */,
+				E2638E0928C2078800E9D8C5 /* fdm_gauss_seidel_solver3.swift */,
+				E2638EBE28C2079E00E9D8C5 /* fdm_iccg_solver2.swift */,
+				E2638E5928C2079000E9D8C5 /* fdm_iccg_solver3.swift */,
+				E2638E9128C2079800E9D8C5 /* fdm_jacobi_solver2.metal */,
+				E2638EB128C2079C00E9D8C5 /* fdm_jacobi_solver2.swift */,
+				E2638E5B28C2079100E9D8C5 /* fdm_jacobi_solver3.metal */,
+				E2638E2528C2078B00E9D8C5 /* fdm_jacobi_solver3.swift */,
+				E2638DFF28C2078700E9D8C5 /* fdm_linear_system_solver.swift */,
+				E2638E2E28C2078C00E9D8C5 /* fdm_linear_system2.metal */,
+				E2638E7628C2079400E9D8C5 /* fdm_linear_system2.swift */,
+				E2638E7528C2079400E9D8C5 /* fdm_linear_system3.metal */,
+				E2638F2D28C207AD00E9D8C5 /* fdm_linear_system3.swift */,
+				E2638E5728C2079000E9D8C5 /* fdm_matrix_row_type.h */,
+				E2638E6628C2079200E9D8C5 /* fdm_mg_linear_system2.metal */,
+				E2638F3628C207AF00E9D8C5 /* fdm_mg_linear_system2.swift */,
+				E2638ED428C207A100E9D8C5 /* fdm_mg_linear_system3.metal */,
+				E2638F6128C207B500E9D8C5 /* fdm_mg_linear_system3.swift */,
+				E2638F0428C207A800E9D8C5 /* fdm_mg_solver2.swift */,
+				E2638ED628C207A100E9D8C5 /* fdm_mg_solver3.swift */,
+				E2638ECE28C207A000E9D8C5 /* fdm_mgpcg_solver2.swift */,
+				E2638E6F28C2079300E9D8C5 /* fdm_mgpcg_solver3.swift */,
+				E2638EA328C2079A00E9D8C5 /* fdm_utils.metal */,
+				E2638E2728C2078C00E9D8C5 /* fdm_utils.swift */,
+				E2638F4E28C207B200E9D8C5 /* field_render.swift */,
+				E2638F1128C207AA00E9D8C5 /* field.swift */,
+				E2638F5D28C207B400E9D8C5 /* flip_solver2_render.swift */,
+				E2638DF428C2078600E9D8C5 /* flip_solver2.metal */,
+				E2638F1D28C207AB00E9D8C5 /* flip_solver2.swift */,
+				E2638F5128C207B300E9D8C5 /* flip_solver3_render.swift */,
+				E2638EE328C207A300E9D8C5 /* flip_solver3.metal */,
+				E2638EDF28C207A200E9D8C5 /* flip_solver3.swift */,
+				E2638E0428C2078800E9D8C5 /* fmm_level_set_solver2.swift */,
+				E2638E4428C2078E00E9D8C5 /* fmm_level_set_solver3.swift */,
+				E2638F1A28C207AB00E9D8C5 /* fmm_level_set_solvers_render.swift */,
+				E2638E8D28C2079800E9D8C5 /* grid_backward_euler_diffusion_solver2.metal */,
+				E2638E9A28C2079900E9D8C5 /* grid_backward_euler_diffusion_solver2.swift */,
+				E2638E4D28C2078F00E9D8C5 /* grid_backward_euler_diffusion_solver3.metal */,
+				E2638F3B28C207AF00E9D8C5 /* grid_backward_euler_diffusion_solver3.swift */,
+				E2638EB228C2079C00E9D8C5 /* grid_blocked_boundary_condition_solver2.swift */,
+				E2638EB328C2079C00E9D8C5 /* grid_blocked_boundary_condition_solver3.swift */,
+				E2638EA728C2079B00E9D8C5 /* grid_boundary_condition_solver2.swift */,
+				E2638DF228C2078600E9D8C5 /* grid_boundary_condition_solver3.swift */,
+				E2638E7828C2079400E9D8C5 /* grid_boundary_condition_solvers_render.swift */,
+				E2638EE728C207A300E9D8C5 /* grid_diffusion_solver2.swift */,
+				E2638EE828C207A400E9D8C5 /* grid_diffusion_solver3.swift */,
+				E2638F1828C207AB00E9D8C5 /* grid_diffusion_solvers_render.swift */,
+				E2638E9C28C2079900E9D8C5 /* grid_emitter_set2.swift */,
+				E2638F4028C207B000E9D8C5 /* grid_emitter_set3.swift */,
+				E2638DFE28C2078700E9D8C5 /* grid_emitter2.swift */,
+				E2638F0028C207A800E9D8C5 /* grid_emitter3.swift */,
+				E2638E3328C2078D00E9D8C5 /* grid_fluid_solver_render.swift */,
+				E2638F2A28C207AD00E9D8C5 /* grid_fluid_solver2.metal */,
+				E2638E9228C2079800E9D8C5 /* grid_fluid_solver2.swift */,
+				E2638E7328C2079300E9D8C5 /* grid_fluid_solver3.metal */,
+				E2638DFA28C2078700E9D8C5 /* grid_fluid_solver3.swift */,
+				E2638E6C28C2079300E9D8C5 /* grid_forward_euler_diffusion_solver2.metal */,
+				E2638F3E28C207B000E9D8C5 /* grid_forward_euler_diffusion_solver2.swift */,
+				E2638F4728C207B100E9D8C5 /* grid_forward_euler_diffusion_solver3.metal */,
+				E2638F0628C207A800E9D8C5 /* grid_forward_euler_diffusion_solver3.swift */,
+				E2638E0028C2078700E9D8C5 /* grid_fractional_boundary_condition_solver2.swift */,
+				E2638EEA28C207A400E9D8C5 /* grid_fractional_boundary_condition_solver3.swift */,
+				E2638F2628C207AC00E9D8C5 /* grid_fractional_single_phase_pressure_solver2.metal */,
+				E2638E2228C2078B00E9D8C5 /* grid_fractional_single_phase_pressure_solver2.swift */,
+				E2638EF728C207A700E9D8C5 /* grid_fractional_single_phase_pressure_solver3.metal */,
+				E2638F4628C207B100E9D8C5 /* grid_fractional_single_phase_pressure_solver3.swift */,
+				E2638F0C28C207A900E9D8C5 /* grid_point_generator2.swift */,
+				E2638E0128C2078800E9D8C5 /* grid_point_generator3.swift */,
+				E2638E9628C2079900E9D8C5 /* grid_pressure_solver2.swift */,
+				E2638EE928C207A400E9D8C5 /* grid_pressure_solver3.swift */,
+				E2638E4F28C2079000E9D8C5 /* grid_single_phase_pressure_solver2.metal */,
+				E2638E8A28C2079700E9D8C5 /* grid_single_phase_pressure_solver2.swift */,
+				E2638E6A28C2079200E9D8C5 /* grid_single_phase_pressure_solver3.metal */,
+				E2638E9B28C2079900E9D8C5 /* grid_single_phase_pressure_solver3.swift */,
+				E2638F3C28C207AF00E9D8C5 /* grid_smoke_solver_render.swift */,
+				E2638F5828C207B400E9D8C5 /* grid_smoke_solver2.metal */,
+				E2638EE128C207A300E9D8C5 /* grid_smoke_solver2.swift */,
+				E2638E3D28C2078E00E9D8C5 /* grid_smoke_solver3.metal */,
+				E2638E2A28C2078C00E9D8C5 /* grid_smoke_solver3.swift */,
+				E2638E0D28C2078900E9D8C5 /* grid_system_data2.swift */,
+				E2638EF928C207A700E9D8C5 /* grid_system_data3.swift */,
+				E2638ED528C207A100E9D8C5 /* grid.metal */,
+				E2638EE528C207A300E9D8C5 /* grid2.swift */,
+				E2638EFF28C207A800E9D8C5 /* grid3.swift */,
+				E2638F3328C207AE00E9D8C5 /* heap.swift */,
+				E2638EC828C207A000E9D8C5 /* hello_fluid_sim.swift */,
+				E2638E6D28C2079300E9D8C5 /* implicit_surface_set2.swift */,
+				E2638F1528C207AA00E9D8C5 /* implicit_surface_set3.swift */,
+				E2638E1D28C2078A00E9D8C5 /* implicit_surface2.swift */,
+				E2638EDC28C207A200E9D8C5 /* implicit_surface3.swift */,
+				E2638F1E28C207AC00E9D8C5 /* implicit_triangle_mesh3.swift */,
+				E2638E3E28C2078E00E9D8C5 /* intersection_query_engine2.swift */,
+				E2638E0228C2078800E9D8C5 /* intersection_query_engine3.swift */,
+				E2638E5828C2079000E9D8C5 /* iterative_level_set_solver2.swift */,
+				E2638DF528C2078600E9D8C5 /* iterative_level_set_solver3.swift */,
+				E2638E5D28C2079100E9D8C5 /* iterative_level_set_solvers_render.swift */,
+				E2638E1628C2078A00E9D8C5 /* kdtree.swift */,
+				E2638E1428C2078900E9D8C5 /* level_set_liquid_solver2_render.swift */,
+				E2638EEB28C207A400E9D8C5 /* level_set_liquid_solver2.metal */,
+				E2638E9928C2079900E9D8C5 /* level_set_liquid_solver2.swift */,
+				E2638EAE28C2079C00E9D8C5 /* level_set_liquid_solver3_render.swift */,
+				E2638E9E28C2079A00E9D8C5 /* level_set_liquid_solver3.metal */,
+				E2638F1228C207AA00E9D8C5 /* level_set_liquid_solver3.swift */,
+				E2638E7928C2079400E9D8C5 /* level_set_solver2.swift */,
+				E2638E2128C2078B00E9D8C5 /* level_set_solver3.swift */,
+				E2638E1828C2078A00E9D8C5 /* level_set_utils.metal */,
+				E2638F5428C207B300E9D8C5 /* level_set_utils.swift */,
+				E2638F2828C207AD00E9D8C5 /* line_shader.metal */,
+				E2638F3428C207AE00E9D8C5 /* list_query_engine2.swift */,
+				E2638E8C28C2079700E9D8C5 /* list_query_engine3.swift */,
+				E2638E4B28C2078F00E9D8C5 /* macros.h */,
+				E2638F6028C207B500E9D8C5 /* marching_cubes_render.swift */,
+				E2638F0D28C207A900E9D8C5 /* marching_cubes_table.swift */,
+				E2638F4828C207B100E9D8C5 /* marching_cubes.swift */,
+				E2638E7A28C2079500E9D8C5 /* marching_squares_table.swift */,
+				E2638EC228C2079F00E9D8C5 /* math_utils.metal */,
+				E2638ECC28C207A000E9D8C5 /* math_utils.swift */,
+				E2638F5628C207B300E9D8C5 /* MathLibrary.swift */,
+				E2638F5B28C207B400E9D8C5 /* matrix2x2.swift */,
+				E2638DEB28C2078500E9D8C5 /* matrix3x3.swift */,
+				E2638E3F28C2078E00E9D8C5 /* matrix4x4.swift */,
+				E2638F1428C207AA00E9D8C5 /* mg.swift */,
+				E2638DEA28C2078500E9D8C5 /* nearest_neighbor_query_engine2.swift */,
+				E2638EFB28C207A700E9D8C5 /* nearest_neighbor_query_engine3.swift */,
+				E2638ED028C207A100E9D8C5 /* Node.swift */,
+				E2638E8B28C2079700E9D8C5 /* octree.swift */,
+				E2638E4128C2078E00E9D8C5 /* parallel.swift */,
+				E2638E1328C2078900E9D8C5 /* particle_emitter_set2.swift */,
+				E2638ED328C207A100E9D8C5 /* particle_emitter_set3.swift */,
+				E2638ECA28C207A000E9D8C5 /* particle_emitter2.swift */,
+				E2638E6828C2079200E9D8C5 /* particle_emitter3.swift */,
+				E2638E9D28C2079A00E9D8C5 /* particle_system_data2.swift */,
+				E2638EF028C207A500E9D8C5 /* particle_system_data3.swift */,
+				E2638E4728C2078F00E9D8C5 /* particle_system_solver2_render.swift */,
+				E2638E2828C2078C00E9D8C5 /* particle_system_solver2.metal */,
+				E2638DF328C2078600E9D8C5 /* particle_system_solver2.swift */,
+				E2638E2C28C2078C00E9D8C5 /* particle_system_solver3_render.swift */,
+				E2638EBB28C2079E00E9D8C5 /* particle_system_solver3.metal */,
+				E2638E1728C2078A00E9D8C5 /* particle_system_solver3.swift */,
+				E2638F5028C207B300E9D8C5 /* Particle.metal */,
+				E2638F3F28C207B000E9D8C5 /* Particles.swift */,
+				E2638E4628C2078F00E9D8C5 /* pci_sph_solver2_render.swift */,
+				E2638E1A28C2078A00E9D8C5 /* pci_sph_solver2.metal */,
+				E2638DED28C2078500E9D8C5 /* pci_sph_solver2.swift */,
+				E2638F4128C207B000E9D8C5 /* pci_sph_solver3_render.swift */,
+				E2638E7C28C2079600E9D8C5 /* pci_sph_solver3.metal */,
+				E2638E5328C2079000E9D8C5 /* pci_sph_solver3.swift */,
+				E2638EBC28C2079E00E9D8C5 /* pde.swift */,
+				E2638E2D28C2078C00E9D8C5 /* physics_animation_render.swift */,
+				E2638F0528C207A800E9D8C5 /* physics_animation.swift */,
+				E2638E0828C2078800E9D8C5 /* physics_helpers.metal */,
+				E2638E1B28C2078A00E9D8C5 /* physics_helpers.swift */,
+				E2638F4928C207B100E9D8C5 /* pic_solver2_render.swift */,
+				E2638E9728C2079900E9D8C5 /* pic_solver2.metal */,
+				E2638F5528C207B300E9D8C5 /* pic_solver2.swift */,
+				E2638F0828C207A900E9D8C5 /* pic_solver3_render.swift */,
+				E2638E0528C2078800E9D8C5 /* pic_solver3.metal */,
+				E2638EF128C207A500E9D8C5 /* pic_solver3.swift */,
+				E2638EB628C2079E00E9D8C5 /* plane2.swift */,
+				E2638E8328C2079600E9D8C5 /* plane3.swift */,
+				E2638EA528C2079B00E9D8C5 /* point_generator2.swift */,
+				E2638F5928C207B400E9D8C5 /* point_generator3.swift */,
+				E2638EAC28C2079B00E9D8C5 /* point_hash_grid_searcher2.swift */,
+				E2638E4528C2078E00E9D8C5 /* point_hash_grid_searcher3.swift */,
+				E2638F4228C207B000E9D8C5 /* point_hash_grid_searchers_render.swift */,
+				E2638F5A28C207B400E9D8C5 /* point_neighbor_searcher2.swift */,
+				E2638EC428C2079F00E9D8C5 /* point_neighbor_searcher3.swift */,
+				E2638E5428C2079000E9D8C5 /* point_parallel_hash_grid_searcher2.swift */,
+				E2638F1B28C207AB00E9D8C5 /* point_parallel_hash_grid_searcher3.swift */,
+				E2638F0E28C207AA00E9D8C5 /* point_particle_emitter2.swift */,
+				E2638EAF28C2079C00E9D8C5 /* point_particle_emitter3.swift */,
+				E2638F2C28C207AD00E9D8C5 /* point_shader.metal */,
+				E2638EA628C2079B00E9D8C5 /* point_simple_list_searcher2.swift */,
+				E2638E4228C2078E00E9D8C5 /* point_simple_list_searcher3.swift */,
+				E2638EAD28C2079C00E9D8C5 /* point2.swift */,
+				E2638E0628C2078800E9D8C5 /* point3.swift */,
+				E2638E5528C2079000E9D8C5 /* points_to_implicit2.swift */,
+				E2638EC928C207A000E9D8C5 /* points_to_implicit3.swift */,
+				E2638E7F28C2079600E9D8C5 /* priority_queue.swift */,
+				E2638E0728C2078800E9D8C5 /* quadtree.swift */,
+				E2638EED28C207A400E9D8C5 /* quaternion.swift */,
+				E2638E8628C2079700E9D8C5 /* ray2.swift */,
+				E2638E0A28C2078800E9D8C5 /* ray3.swift */,
+				E2638E0B28C2078900E9D8C5 /* RayMarching.metal */,
+				E2638DF728C2078600E9D8C5 /* RayMarching.swift */,
+				E2638E5E28C2079100E9D8C5 /* rigid_body_collider2.swift */,
+				E2638EC528C2079F00E9D8C5 /* rigid_body_collider3.swift */,
+				E2638F4428C207B100E9D8C5 /* samplers.swift */,
+				E2638E0C28C2078900E9D8C5 /* scalar_field2.swift */,
+				E2638E7228C2079300E9D8C5 /* scalar_field3.swift */,
+				E2638DF028C2078600E9D8C5 /* scalar_grid2.swift */,
+				E2638EA128C2079A00E9D8C5 /* scalar_grid3.swift */,
+				E2638E8E28C2079800E9D8C5 /* semi_lagrangian2.swift */,
+				E2638F2728C207AD00E9D8C5 /* semi_lagrangian3.swift */,
+				E2638DF928C2078700E9D8C5 /* size2.swift */,
+				E2638E6928C2079200E9D8C5 /* size3.swift */,
+				E2638E0E28C2078900E9D8C5 /* sph_kernels_render.swift */,
+				E2638E6E28C2079300E9D8C5 /* sph_kernels2_impl.metal */,
+				E2638EFD28C207A700E9D8C5 /* sph_kernels2.metal */,
+				E2638E7E28C2079600E9D8C5 /* sph_kernels2.swift */,
+				E2638EB028C2079C00E9D8C5 /* sph_kernels3_impl.metal */,
+				E2638EDD28C207A200E9D8C5 /* sph_kernels3.metal */,
+				E2638DEE28C2078500E9D8C5 /* sph_kernels3.swift */,
+				E2638E4C28C2078F00E9D8C5 /* sph_points_to_implicit2_render.swift */,
+				E2638E2F28C2078C00E9D8C5 /* sph_points_to_implicit2.swift */,
+				E2638E7128C2079300E9D8C5 /* sph_points_to_implicit3_render.swift */,
+				E2638E4828C2078F00E9D8C5 /* sph_points_to_implicit3.swift */,
+				E2638E5F28C2079100E9D8C5 /* sph_solver2_render.swift */,
+				E2638E2028C2078B00E9D8C5 /* sph_solver2.metal */,
+				E2638EA228C2079A00E9D8C5 /* sph_solver2.swift */,
+				E2638E7028C2079300E9D8C5 /* sph_solver3_render.swift */,
+				E2638E3028C2078C00E9D8C5 /* sph_solver3.metal */,
+				E2638E6B28C2079200E9D8C5 /* sph_solver3.swift */,
+				E2638E4028C2078E00E9D8C5 /* sph_system_data2_render.swift */,
+				E2638EC628C207A000E9D8C5 /* sph_system_data2.swift */,
+				E2638F1028C207AA00E9D8C5 /* sph_system_data3_render.swift */,
+				E2638ECD28C207A000E9D8C5 /* sph_system_data3.swift */,
+				E2638F1C28C207AB00E9D8C5 /* sphere2.swift */,
+				E2638E9028C2079800E9D8C5 /* sphere3.swift */,
+				E2638F0F28C207AA00E9D8C5 /* spherical_points_to_implicit2_render.swift */,
+				E2638EB528C2079E00E9D8C5 /* spherical_points_to_implicit2.swift */,
+				E2638EB928C2079E00E9D8C5 /* spherical_points_to_implicit3_render.swift */,
+				E2638EFE28C207A800E9D8C5 /* spherical_points_to_implicit3.swift */,
+				E2638E2628C2078B00E9D8C5 /* stack.swift */,
+				E2638E1028C2078900E9D8C5 /* surface_set2.swift */,
+				E2638F2F28C207AE00E9D8C5 /* surface_set3.swift */,
+				E2638DEF28C2078500E9D8C5 /* surface_to_implicit2.swift */,
+				E2638F5228C207B300E9D8C5 /* surface_to_implicit3.swift */,
+				E2638EB728C2079E00E9D8C5 /* surface2.swift */,
+				E2638E3128C2078C00E9D8C5 /* surface3.swift */,
+				E2638E1C28C2078A00E9D8C5 /* svd.swift */,
+				E2638DFD28C2078700E9D8C5 /* transform2.swift */,
+				E2638EEE28C207A400E9D8C5 /* transform3.swift */,
+				E2638F4B28C207B200E9D8C5 /* triangle_mesh_to_sdf_render.swift */,
+				E2638E8028C2079600E9D8C5 /* triangle_mesh_to_sdf.swift */,
+				E2638E3628C2078D00E9D8C5 /* triangle_mesh3_render.swift */,
+				E2638F5728C207B400E9D8C5 /* triangle_mesh3.swift */,
+				E2638F3028C207AE00E9D8C5 /* triangle_point_generator.swift */,
+				E2638E4A28C2078F00E9D8C5 /* triangle3.swift */,
+				E2638DF628C2078600E9D8C5 /* upwind_level_set_solver2.swift */,
+				E2638EB828C2079E00E9D8C5 /* upwind_level_set_solver3.swift */,
+				E2638DFC28C2078700E9D8C5 /* vector_field2.swift */,
+				E2638E8528C2079700E9D8C5 /* vector_field3.swift */,
+				E2638EBA28C2079E00E9D8C5 /* vector_grid2.swift */,
+				E2638F4C28C207B200E9D8C5 /* vector_grid3.swift */,
+				E2638E2428C2078B00E9D8C5 /* vector2.swift */,
+				E2638E6028C2079100E9D8C5 /* vector3.swift */,
+				E2638E4928C2078F00E9D8C5 /* vector4.swift */,
+				E2638F4F28C207B300E9D8C5 /* vertex_centered_scalar_grid2_impl.metal */,
+				E2638E1128C2078900E9D8C5 /* vertex_centered_scalar_grid2.metal */,
+				E2638F1328C207AA00E9D8C5 /* vertex_centered_scalar_grid2.swift */,
+				E2638F5C28C207B400E9D8C5 /* vertex_centered_scalar_grid3_impl.metal */,
+				E2638E9328C2079800E9D8C5 /* vertex_centered_scalar_grid3.metal */,
+				E2638E1228C2078900E9D8C5 /* vertex_centered_scalar_grid3.swift */,
+				E2638F1928C207AB00E9D8C5 /* vertex_centered_vector_grid2_impl.metal */,
+				E2638E6228C2079100E9D8C5 /* vertex_centered_vector_grid2.metal */,
+				E2638E6328C2079200E9D8C5 /* vertex_centered_vector_grid2.swift */,
+				E2638E3A28C2078D00E9D8C5 /* vertex_centered_vector_grid3_impl.metal */,
+				E2638F3228C207AE00E9D8C5 /* vertex_centered_vector_grid3.metal */,
+				E2638F2528C207AC00E9D8C5 /* vertex_centered_vector_grid3.swift */,
+				E2638E3B28C2078E00E9D8C5 /* volume_grid_emitter2.swift */,
+				E2638E9428C2079800E9D8C5 /* volume_grid_emitter3.swift */,
+				E2638EF228C207A500E9D8C5 /* volume_particle_emitter2.swift */,
+				E2638F1F28C207AC00E9D8C5 /* volume_particle_emitter3.swift */,
+				E2638E6428C2079200E9D8C5 /* volume_particle_emitters_render.swift */,
+				E2638EA428C2079A00E9D8C5 /* zhu_bridson_points_to_implicit2_render.swift */,
+				E2638E6528C2079200E9D8C5 /* zhu_bridson_points_to_implicit2.swift */,
+				E2638F2128C207AC00E9D8C5 /* zhu_bridson_points_to_implicit3_render.swift */,
+				E2638E3928C2078D00E9D8C5 /* zhu_bridson_points_to_implicit3.swift */,
 				E2638DE028C2071500E9D8C5 /* Preview Content */,
 			);
 			path = "Fluid Engine";
@@ -125,6 +1286,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26062B528C397D9000DDBEB /* bunny.obj in Resources */,
+				E26062B628C397D9000DDBEB /* cube.obj in Resources */,
+				E26062B728C397D9000DDBEB /* cup.obj in Resources */,
+				E26062B828C397D9000DDBEB /* kCubeTriMesh3x3x3As.obj in Resources */,
+				E26062B928C397D9000DDBEB /* kSphereTriMesh5x5.obj in Resources */,
+				E26062B428C397D5000DDBEB /* snowflake.png in Resources */,
+				E26062B328C397D0000DDBEB /* fire.png in Resources */,
 				E2638DE228C2071500E9D8C5 /* Preview Assets.xcassets in Resources */,
 				E2638DDF28C2071500E9D8C5 /* Assets.xcassets in Resources */,
 			);
@@ -137,12 +1305,393 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2638FA128C207B500E9D8C5 /* advection_solver2.swift in Sources */,
+				E2638FB328C207B500E9D8C5 /* volume_grid_emitter2.swift in Sources */,
+				E26390CB28C207B700E9D8C5 /* pic_solver2.swift in Sources */,
+				E2638FEE28C207B600E9D8C5 /* grid_boundary_condition_solvers_render.swift in Sources */,
+				E263901528C207B600E9D8C5 /* fdm_gauss_seidel_solver3.metal in Sources */,
+				E26390AA28C207B700E9D8C5 /* list_query_engine2.swift in Sources */,
+				E2638FE628C207B600E9D8C5 /* sph_solver3_render.swift in Sources */,
+				E263900E28C207B600E9D8C5 /* face_centered_grid3.swift in Sources */,
+				E26390AD28C207B700E9D8C5 /* fdm_gauss_seidel_solver2.swift in Sources */,
+				E2638F6C28C207B500E9D8C5 /* flip_solver2.metal in Sources */,
+				E2638FF628C207B600E9D8C5 /* triangle_mesh_to_sdf.swift in Sources */,
+				E2638F7F28C207B500E9D8C5 /* quadtree.swift in Sources */,
+				E2638FA528C207B500E9D8C5 /* physics_animation_render.swift in Sources */,
+				E26390B628C207B700E9D8C5 /* grid_emitter_set3.swift in Sources */,
+				E263903928C207B600E9D8C5 /* custom_scalar_field2.swift in Sources */,
+				E263901B28C207B600E9D8C5 /* point_generator2.swift in Sources */,
+				E2638FF128C207B600E9D8C5 /* anisotropic_points_to_implicit2_render.swift in Sources */,
+				E26390D428C207B700E9D8C5 /* custom_implicit_surface3.swift in Sources */,
 				E2638DDD28C2071400E9D8C5 /* ContentView.swift in Sources */,
-				E2638DDB28C2071400E9D8C5 /* Fluid_EngineApp.swift in Sources */,
+				E26390BC28C207B700E9D8C5 /* grid_fractional_single_phase_pressure_solver3.swift in Sources */,
+				E2638F8128C207B500E9D8C5 /* fdm_gauss_seidel_solver3.swift in Sources */,
+				E2638FCB28C207B500E9D8C5 /* point_parallel_hash_grid_searcher2.swift in Sources */,
+				E263906628C207B600E9D8C5 /* particle_system_data3.swift in Sources */,
+				E263909028C207B600E9D8C5 /* fmm_level_set_solvers_render.swift in Sources */,
+				E263903228C207B600E9D8C5 /* pde.swift in Sources */,
+				E263900828C207B600E9D8C5 /* grid_fluid_solver2.swift in Sources */,
+				E2638FF828C207B600E9D8C5 /* array_utils_GPU.swift in Sources */,
+				E2638F8B28C207B500E9D8C5 /* particle_emitter_set2.swift in Sources */,
+				E2638FAF28C207B500E9D8C5 /* Renderable.swift in Sources */,
+				E263905A28C207B600E9D8C5 /* apic_solver2.swift in Sources */,
+				E2638FE128C207B600E9D8C5 /* sph_solver3.swift in Sources */,
+				E2638FFD28C207B600E9D8C5 /* box3.swift in Sources */,
+				E2638FDB28C207B600E9D8C5 /* zhu_bridson_points_to_implicit2.swift in Sources */,
+				E2638F9328C207B500E9D8C5 /* physics_helpers.swift in Sources */,
+				E263908E28C207B600E9D8C5 /* grid_diffusion_solvers_render.swift in Sources */,
+				E263908028C207B600E9D8C5 /* array_accessor2.swift in Sources */,
+				E2638F8A28C207B500E9D8C5 /* vertex_centered_scalar_grid3.swift in Sources */,
+				E2638FC628C207B500E9D8C5 /* grid_single_phase_pressure_solver2.metal in Sources */,
+				E2638F6228C207B500E9D8C5 /* nearest_neighbor_query_engine2.swift in Sources */,
+				E2638F7E28C207B500E9D8C5 /* point3.swift in Sources */,
+				E263907828C207B600E9D8C5 /* bcc_lattice_point_generator.swift in Sources */,
+				E2638FF228C207B600E9D8C5 /* pci_sph_solver3.metal in Sources */,
+				E2638FA428C207B500E9D8C5 /* particle_system_solver3_render.swift in Sources */,
+				E263905F28C207B600E9D8C5 /* grid_pressure_solver3.swift in Sources */,
+				E2638F6B28C207B500E9D8C5 /* particle_system_solver2.swift in Sources */,
+				E263902328C207B600E9D8C5 /* point2.swift in Sources */,
+				E2638FA228C207B500E9D8C5 /* grid_smoke_solver3.swift in Sources */,
+				E263902728C207B600E9D8C5 /* fdm_jacobi_solver2.swift in Sources */,
+				E2638F8728C207B500E9D8C5 /* array_samplers1.metal in Sources */,
+				E26390BF28C207B700E9D8C5 /* pic_solver2_render.swift in Sources */,
+				E26390B728C207B700E9D8C5 /* pci_sph_solver3_render.swift in Sources */,
+				E263908328C207B600E9D8C5 /* marching_cubes_table.swift in Sources */,
+				E2638F8228C207B500E9D8C5 /* ray3.swift in Sources */,
+				E2638FD028C207B500E9D8C5 /* array_accessor2.metal in Sources */,
+				E263905228C207B600E9D8C5 /* implicit_surface3.swift in Sources */,
+				E2638F8D28C207B500E9D8C5 /* FluidEngineApp.swift in Sources */,
+				E2638FEC28C207B600E9D8C5 /* fdm_linear_system2.swift in Sources */,
+				E2638F9028C207B500E9D8C5 /* level_set_utils.metal in Sources */,
+				E2638FF428C207B600E9D8C5 /* sph_kernels2.swift in Sources */,
+				E263908C28C207B600E9D8C5 /* Emitter.swift in Sources */,
+				E2638F9F28C207B500E9D8C5 /* fdm_utils.swift in Sources */,
+				E2638FD328C207B500E9D8C5 /* iterative_level_set_solvers_render.swift in Sources */,
+				E26390BE28C207B700E9D8C5 /* marching_cubes.swift in Sources */,
+				E263906C28C207B600E9D8C5 /* collocated_vector_grid2.swift in Sources */,
+				E263900928C207B600E9D8C5 /* vertex_centered_scalar_grid3.metal in Sources */,
+				E263909828C207B600E9D8C5 /* bvh2.swift in Sources */,
+				E2638FD528C207B500E9D8C5 /* sph_solver2_render.swift in Sources */,
+				E263905D28C207B600E9D8C5 /* grid_diffusion_solver2.swift in Sources */,
+				E263904928C207B600E9D8C5 /* particle_emitter_set3.swift in Sources */,
+				E2638F8328C207B500E9D8C5 /* RayMarching.metal in Sources */,
+				E263901C28C207B600E9D8C5 /* point_simple_list_searcher2.swift in Sources */,
+				E263901228C207B600E9D8C5 /* grid_emitter_set2.swift in Sources */,
+				E263902928C207B600E9D8C5 /* grid_blocked_boundary_condition_solver3.swift in Sources */,
+				E263904828C207B600E9D8C5 /* cell_centered_scalar_grid2_impl.metal in Sources */,
+				E26390D328C207B700E9D8C5 /* flip_solver2_render.swift in Sources */,
+				E2638FED28C207B600E9D8C5 /* constant_scalar_field2.metal in Sources */,
+				E2638FAB28C207B500E9D8C5 /* grid_fluid_solver_render.swift in Sources */,
+				E263908928C207B600E9D8C5 /* vertex_centered_scalar_grid2.swift in Sources */,
+				E263907E28C207B600E9D8C5 /* pic_solver3_render.swift in Sources */,
+				E263904F28C207B600E9D8C5 /* blas.swift in Sources */,
+				E263906D28C207B600E9D8C5 /* grid_fractional_single_phase_pressure_solver3.metal in Sources */,
+				E26390A528C207B700E9D8C5 /* surface_set3.swift in Sources */,
+				E26390D228C207B700E9D8C5 /* vertex_centered_scalar_grid3_impl.metal in Sources */,
+				E2638F9628C207B500E9D8C5 /* cubic_semi_lagrangian3.swift in Sources */,
+				E2638FE028C207B600E9D8C5 /* grid_single_phase_pressure_solver3.metal in Sources */,
+				E26390CC28C207B700E9D8C5 /* MathLibrary.swift in Sources */,
+				E2638FD628C207B500E9D8C5 /* vector3.swift in Sources */,
+				E263904228C207B600E9D8C5 /* math_utils.swift in Sources */,
+				E2638FDC28C207B600E9D8C5 /* fdm_mg_linear_system2.metal in Sources */,
+				E263908F28C207B600E9D8C5 /* vertex_centered_vector_grid2_impl.metal in Sources */,
+				E263903B28C207B600E9D8C5 /* rigid_body_collider3.swift in Sources */,
+				E263909C28C207B600E9D8C5 /* grid_fractional_single_phase_pressure_solver2.metal in Sources */,
+				E2638FA028C207B500E9D8C5 /* particle_system_solver2.metal in Sources */,
+				E263906428C207B600E9D8C5 /* transform3.swift in Sources */,
+				E2638FEF28C207B600E9D8C5 /* level_set_solver2.swift in Sources */,
+				E2638F7528C207B500E9D8C5 /* transform2.swift in Sources */,
+				E263901828C207B600E9D8C5 /* sph_solver2.swift in Sources */,
+				E2638FD928C207B600E9D8C5 /* vertex_centered_vector_grid2.swift in Sources */,
+				E263903C28C207B600E9D8C5 /* sph_system_data2.swift in Sources */,
+				E263907328C207B600E9D8C5 /* sph_kernels2.metal in Sources */,
+				E263903F28C207B600E9D8C5 /* points_to_implicit3.swift in Sources */,
+				E2638FA928C207B500E9D8C5 /* surface3.swift in Sources */,
+				E2638F7328C207B500E9D8C5 /* constant_vector_field2.swift in Sources */,
+				E2638F9728C207B500E9D8C5 /* cg.swift in Sources */,
+				E263906A28C207B600E9D8C5 /* face_centered_grid2.metal in Sources */,
+				E263904628C207B600E9D8C5 /* Node.swift in Sources */,
+				E2638F6328C207B500E9D8C5 /* matrix3x3.swift in Sources */,
+				E263904B28C207B600E9D8C5 /* grid.metal in Sources */,
+				E2638F9428C207B500E9D8C5 /* svd.swift in Sources */,
+				E26390BB28C207B700E9D8C5 /* collider_set3.swift in Sources */,
+				E2638F7928C207B500E9D8C5 /* grid_point_generator3.swift in Sources */,
+				E263906F28C207B600E9D8C5 /* grid_system_data3.swift in Sources */,
+				E263900128C207B600E9D8C5 /* octree.swift in Sources */,
+				E2638FBC28C207B500E9D8C5 /* fmm_level_set_solver3.swift in Sources */,
+				E263905328C207B600E9D8C5 /* sph_kernels3.metal in Sources */,
+				E2638FFE28C207B600E9D8C5 /* bvh3.swift in Sources */,
+				E26390B028C207B700E9D8C5 /* collider3.swift in Sources */,
+				E263909B28C207B600E9D8C5 /* vertex_centered_vector_grid3.swift in Sources */,
+				E26390C228C207B700E9D8C5 /* vector_grid3.swift in Sources */,
+				E2638FBB28C207B500E9D8C5 /* cell_centered_scalar_grid2.swift in Sources */,
+				E26390C628C207B700E9D8C5 /* Particle.metal in Sources */,
+				E263905828C207B600E9D8C5 /* constant_scalar_field3.metal in Sources */,
+				E2638F8C28C207B500E9D8C5 /* level_set_liquid_solver2_render.swift in Sources */,
+				E2638FC928C207B500E9D8C5 /* array1.swift in Sources */,
+				E2638F8828C207B500E9D8C5 /* surface_set2.swift in Sources */,
+				E263903428C207B600E9D8C5 /* fdm_iccg_solver2.swift in Sources */,
+				E263905028C207B600E9D8C5 /* cubic_semi_lagrangian2.swift in Sources */,
+				E2638FCA28C207B500E9D8C5 /* pci_sph_solver3.swift in Sources */,
+				E26390CF28C207B700E9D8C5 /* point_generator3.swift in Sources */,
+				E2638FDA28C207B600E9D8C5 /* volume_particle_emitters_render.swift in Sources */,
+				E263902C28C207B600E9D8C5 /* plane2.swift in Sources */,
+				E263904A28C207B600E9D8C5 /* fdm_mg_linear_system3.metal in Sources */,
+				E2638F6A28C207B500E9D8C5 /* grid_boundary_condition_solver3.swift in Sources */,
+				E26390B828C207B700E9D8C5 /* point_hash_grid_searchers_render.swift in Sources */,
+				E263903128C207B600E9D8C5 /* particle_system_solver3.metal in Sources */,
+				E263901628C207B600E9D8C5 /* cell_centered_vector_grid2.metal in Sources */,
+				E2638FA628C207B500E9D8C5 /* fdm_linear_system2.metal in Sources */,
+				E263900628C207B600E9D8C5 /* sphere3.swift in Sources */,
+				E2638F7428C207B500E9D8C5 /* vector_field2.swift in Sources */,
+				E2638FE928C207B600E9D8C5 /* grid_fluid_solver3.metal in Sources */,
+				E2638FF728C207B600E9D8C5 /* bounding_box2.swift in Sources */,
+				E26390AB28C207B700E9D8C5 /* cell_centered_scalar_grid3_impl.metal in Sources */,
+				E263902428C207B600E9D8C5 /* level_set_liquid_solver3_render.swift in Sources */,
+				E26390B528C207B700E9D8C5 /* Particles.swift in Sources */,
+				E26390C428C207B700E9D8C5 /* field_render.swift in Sources */,
+				E2638FE528C207B600E9D8C5 /* fdm_mgpcg_solver3.swift in Sources */,
+				E2638FF328C207B600E9D8C5 /* array_samplers.metal in Sources */,
+				E2638F6D28C207B500E9D8C5 /* iterative_level_set_solver3.swift in Sources */,
+				E26390A728C207B700E9D8C5 /* cell_centered_vector_grid3.metal in Sources */,
+				E263900B28C207B600E9D8C5 /* custom_vector_field3.swift in Sources */,
+				E263902028C207B600E9D8C5 /* face_centered_grid2.swift in Sources */,
+				E263900428C207B600E9D8C5 /* semi_lagrangian2.swift in Sources */,
+				E2638FE328C207B600E9D8C5 /* implicit_surface_set2.swift in Sources */,
+				E2638F9228C207B500E9D8C5 /* pci_sph_solver2.metal in Sources */,
+				E263904D28C207B600E9D8C5 /* array_utils_render.swift in Sources */,
+				E2638FD728C207B500E9D8C5 /* anisotropic_points_to_implicit3.swift in Sources */,
+				E2638F9C28C207B500E9D8C5 /* vector2.swift in Sources */,
+				E263902E28C207B600E9D8C5 /* upwind_level_set_solver3.swift in Sources */,
+				E26390D728C207B700E9D8C5 /* fdm_mg_linear_system3.swift in Sources */,
+				E26390C328C207B700E9D8C5 /* apic_solver3.metal in Sources */,
+				E26390AC28C207B700E9D8C5 /* fdm_mg_linear_system2.swift in Sources */,
+				E2638FA328C207B500E9D8C5 /* constant_scalar_field3.swift in Sources */,
+				E263904028C207B600E9D8C5 /* particle_emitter2.swift in Sources */,
+				E26390C028C207B700E9D8C5 /* constant_vector_field2.metal in Sources */,
+				E2638FB128C207B500E9D8C5 /* zhu_bridson_points_to_implicit3.swift in Sources */,
+				E2638FC428C207B500E9D8C5 /* grid_backward_euler_diffusion_solver3.metal in Sources */,
+				E263908B28C207B600E9D8C5 /* implicit_surface_set3.swift in Sources */,
+				E263906128C207B600E9D8C5 /* level_set_liquid_solver2.metal in Sources */,
+				E26390CE28C207B700E9D8C5 /* grid_smoke_solver2.metal in Sources */,
+				E2638FC128C207B500E9D8C5 /* vector4.swift in Sources */,
+				E26390A328C207B600E9D8C5 /* fdm_linear_system3.swift in Sources */,
+				E263904128C207B600E9D8C5 /* face_centered_grid2_impl.metal in Sources */,
+				E263900228C207B600E9D8C5 /* list_query_engine3.swift in Sources */,
+				E26390B128C207B700E9D8C5 /* grid_backward_euler_diffusion_solver3.swift in Sources */,
+				E263907428C207B600E9D8C5 /* spherical_points_to_implicit3.swift in Sources */,
+				E26390B428C207B700E9D8C5 /* grid_forward_euler_diffusion_solver2.swift in Sources */,
+				E263909F28C207B600E9D8C5 /* collocated_vector_grid3.swift in Sources */,
+				E263908128C207B600E9D8C5 /* custom_implicit_surface2.swift in Sources */,
+				E263909128C207B600E9D8C5 /* point_parallel_hash_grid_searcher3.swift in Sources */,
+				E263902228C207B600E9D8C5 /* point_hash_grid_searcher2.swift in Sources */,
+				E2638FB228C207B500E9D8C5 /* vertex_centered_vector_grid3_impl.metal in Sources */,
+				E263905928C207B600E9D8C5 /* flip_solver3.metal in Sources */,
+				E2638F6728C207B500E9D8C5 /* surface_to_implicit2.swift in Sources */,
+				E263908228C207B600E9D8C5 /* grid_point_generator2.swift in Sources */,
+				E263905728C207B600E9D8C5 /* grid_smoke_solver2.swift in Sources */,
+				E2638FCE28C207B500E9D8C5 /* iterative_level_set_solver2.swift in Sources */,
+				E263904428C207B600E9D8C5 /* fdm_mgpcg_solver2.swift in Sources */,
+				E263905128C207B600E9D8C5 /* cylinder3.swift in Sources */,
+				E26390D528C207B700E9D8C5 /* array_samplers3.swift in Sources */,
+				E2638F9128C207B500E9D8C5 /* fdm_cg_solver3.swift in Sources */,
+				E263908D28C207B600E9D8C5 /* fdm_cg_solver2.swift in Sources */,
+				E263902828C207B600E9D8C5 /* grid_blocked_boundary_condition_solver2.swift in Sources */,
+				E2638FAE28C207B500E9D8C5 /* triangle_mesh3_render.swift in Sources */,
+				E2638FC828C207B500E9D8C5 /* fcc_lattice_point_generator.swift in Sources */,
+				E263903728C207B600E9D8C5 /* eno_level_set_solver3.swift in Sources */,
+				E2638FD228C207B500E9D8C5 /* array_samplers1.swift in Sources */,
+				E263907528C207B600E9D8C5 /* grid3.swift in Sources */,
+				E2638FB528C207B500E9D8C5 /* grid_smoke_solver3.metal in Sources */,
+				E2638FE728C207B600E9D8C5 /* sph_points_to_implicit3_render.swift in Sources */,
+				E2638F6428C207B500E9D8C5 /* face_centered_grid3.metal in Sources */,
+				E263909A28C207B600E9D8C5 /* apic_solver2_render.swift in Sources */,
+				E26390A128C207B600E9D8C5 /* collider2.swift in Sources */,
+				E2638FB728C207B500E9D8C5 /* matrix4x4.swift in Sources */,
+				E263905C28C207B600E9D8C5 /* advection_solver3.swift in Sources */,
+				E263901028C207B600E9D8C5 /* grid_backward_euler_diffusion_solver2.swift in Sources */,
+				E26390A028C207B600E9D8C5 /* grid_fluid_solver2.metal in Sources */,
+				E263903328C207B600E9D8C5 /* cell_centered_vector_grid3.swift in Sources */,
+				E26390BD28C207B700E9D8C5 /* grid_forward_euler_diffusion_solver3.metal in Sources */,
+				E263909D28C207B600E9D8C5 /* semi_lagrangian3.swift in Sources */,
+				E2638F9528C207B500E9D8C5 /* implicit_surface2.swift in Sources */,
+				E263900328C207B600E9D8C5 /* grid_backward_euler_diffusion_solver2.metal in Sources */,
+				E2638FB828C207B500E9D8C5 /* sph_system_data2_render.swift in Sources */,
+				E263907A28C207B600E9D8C5 /* fdm_mg_solver2.swift in Sources */,
+				E26390A828C207B700E9D8C5 /* vertex_centered_vector_grid3.metal in Sources */,
+				E2638FC028C207B500E9D8C5 /* sph_points_to_implicit3.swift in Sources */,
+				E2638F8928C207B500E9D8C5 /* vertex_centered_scalar_grid2.metal in Sources */,
+				E2638F7A28C207B500E9D8C5 /* intersection_query_engine3.swift in Sources */,
+				E2638FD828C207B600E9D8C5 /* vertex_centered_vector_grid2.metal in Sources */,
+				E2638FE828C207B600E9D8C5 /* scalar_field3.swift in Sources */,
+				E2638FB628C207B500E9D8C5 /* intersection_query_engine2.swift in Sources */,
+				E2638FA728C207B500E9D8C5 /* sph_points_to_implicit2.swift in Sources */,
+				E26390AE28C207B700E9D8C5 /* custom_vector_field2.swift in Sources */,
+				E2638F6F28C207B500E9D8C5 /* RayMarching.swift in Sources */,
+				E2638FEA28C207B600E9D8C5 /* constant_scalar_field2.swift in Sources */,
+				E263901E28C207B600E9D8C5 /* anisotropic_points_to_implicit2.swift in Sources */,
+				E263901928C207B600E9D8C5 /* fdm_utils.metal in Sources */,
+				E263908628C207B600E9D8C5 /* sph_system_data3_render.swift in Sources */,
+				E263905428C207B600E9D8C5 /* constant_vector_field3.swift in Sources */,
+				E2638F7C28C207B500E9D8C5 /* fmm_level_set_solver2.swift in Sources */,
+				E263907228C207B600E9D8C5 /* face_centered_grid3_impl.metal in Sources */,
+				E263909328C207B600E9D8C5 /* flip_solver2.swift in Sources */,
+				E263908828C207B600E9D8C5 /* level_set_liquid_solver3.swift in Sources */,
+				E263903828C207B600E9D8C5 /* math_utils.metal in Sources */,
+				E2638FF928C207B600E9D8C5 /* plane3.swift in Sources */,
+				E2638F6828C207B500E9D8C5 /* scalar_grid2.swift in Sources */,
+				E263904C28C207B600E9D8C5 /* fdm_mg_solver3.swift in Sources */,
+				E2638FC228C207B500E9D8C5 /* triangle3.swift in Sources */,
+				E263904E28C207B600E9D8C5 /* fdm_gauss_seidel_solver2.metal in Sources */,
+				E2638FDE28C207B600E9D8C5 /* particle_emitter3.swift in Sources */,
+				E263907B28C207B600E9D8C5 /* physics_animation.swift in Sources */,
+				E263902D28C207B600E9D8C5 /* surface2.swift in Sources */,
+				E26390B228C207B700E9D8C5 /* grid_smoke_solver_render.swift in Sources */,
+				E26390CD28C207B700E9D8C5 /* triangle_mesh3.swift in Sources */,
+				E263900F28C207B600E9D8C5 /* level_set_liquid_solver2.swift in Sources */,
+				E263906828C207B600E9D8C5 /* volume_particle_emitter2.swift in Sources */,
+				E263903028C207B600E9D8C5 /* vector_grid2.swift in Sources */,
+				E2638F9928C207B500E9D8C5 /* level_set_solver3.swift in Sources */,
+				E2638FAA28C207B500E9D8C5 /* cell_centered_scalar_grid3.metal in Sources */,
+				E2638F7628C207B500E9D8C5 /* grid_emitter2.swift in Sources */,
+				E263909628C207B600E9D8C5 /* constant_scalar_field3_impl.metal in Sources */,
+				E2638FB028C207B500E9D8C5 /* apic_solver3.swift in Sources */,
+				E2638FA828C207B500E9D8C5 /* sph_solver3.metal in Sources */,
+				E263900528C207B600E9D8C5 /* array2.swift in Sources */,
+				E263900728C207B600E9D8C5 /* fdm_jacobi_solver2.metal in Sources */,
+				E26390C128C207B700E9D8C5 /* triangle_mesh_to_sdf_render.swift in Sources */,
+				E26390C828C207B700E9D8C5 /* surface_to_implicit3.swift in Sources */,
+				E263909428C207B600E9D8C5 /* implicit_triangle_mesh3.swift in Sources */,
+				E2638FDD28C207B600E9D8C5 /* animation.swift in Sources */,
+				E2638F6528C207B500E9D8C5 /* pci_sph_solver2.swift in Sources */,
+				E263907928C207B600E9D8C5 /* cell_centered_scalar_grid3.swift in Sources */,
+				E2638FE428C207B600E9D8C5 /* sph_kernels2_impl.metal in Sources */,
+				E2638F8F28C207B500E9D8C5 /* particle_system_solver3.swift in Sources */,
+				E2638FC728C207B500E9D8C5 /* array_accessor1.swift in Sources */,
+				E263900C28C207B600E9D8C5 /* grid_pressure_solver2.swift in Sources */,
+				E263908528C207B600E9D8C5 /* spherical_points_to_implicit2_render.swift in Sources */,
+				E263901128C207B600E9D8C5 /* grid_single_phase_pressure_solver3.swift in Sources */,
+				E2638FAD28C207B500E9D8C5 /* array_samplers2.swift in Sources */,
+				E263908A28C207B600E9D8C5 /* mg.swift in Sources */,
+				E2638FD128C207B500E9D8C5 /* fdm_jacobi_solver3.metal in Sources */,
+				E263903628C207B600E9D8C5 /* anisotropic_points_to_implicit3_render.swift in Sources */,
+				E263905E28C207B600E9D8C5 /* grid_diffusion_solver3.swift in Sources */,
+				E2638FCC28C207B500E9D8C5 /* points_to_implicit2.swift in Sources */,
+				E263904728C207B600E9D8C5 /* cell_centered_vector_grid2_impl.metal in Sources */,
+				E2638F7B28C207B500E9D8C5 /* array_accessor.metal in Sources */,
+				E2638FD428C207B500E9D8C5 /* rigid_body_collider2.swift in Sources */,
+				E263902F28C207B600E9D8C5 /* spherical_points_to_implicit3_render.swift in Sources */,
+				E263900A28C207B600E9D8C5 /* volume_grid_emitter3.swift in Sources */,
+				E2638F7228C207B500E9D8C5 /* grid_fluid_solver3.swift in Sources */,
+				E2638FCD28C207B500E9D8C5 /* box2.swift in Sources */,
+				E26390C928C207B700E9D8C5 /* array_utils_CPU.swift in Sources */,
+				E26390BA28C207B700E9D8C5 /* samplers.swift in Sources */,
+				E263901428C207B600E9D8C5 /* level_set_liquid_solver3.metal in Sources */,
+				E2638FF528C207B600E9D8C5 /* priority_queue.swift in Sources */,
+				E2638FB928C207B500E9D8C5 /* parallel.swift in Sources */,
+				E263909728C207B600E9D8C5 /* zhu_bridson_points_to_implicit3_render.swift in Sources */,
+				E263901D28C207B600E9D8C5 /* grid_boundary_condition_solver2.swift in Sources */,
+				E263909528C207B600E9D8C5 /* volume_particle_emitter3.swift in Sources */,
+				E2638FBE28C207B500E9D8C5 /* pci_sph_solver2_render.swift in Sources */,
+				E26390B328C207B700E9D8C5 /* cell_centered_scalar_grid2.metal in Sources */,
+				E2638FB428C207B500E9D8C5 /* custom_scalar_field3.swift in Sources */,
+				E2638F7728C207B500E9D8C5 /* fdm_linear_system_solver.swift in Sources */,
+				E263906328C207B600E9D8C5 /* quaternion.swift in Sources */,
+				E26390C528C207B700E9D8C5 /* vertex_centered_scalar_grid2_impl.metal in Sources */,
+				E2638FAC28C207B500E9D8C5 /* array3.swift in Sources */,
+				E26390C728C207B700E9D8C5 /* flip_solver3_render.swift in Sources */,
+				E2638FCF28C207B500E9D8C5 /* fdm_iccg_solver3.swift in Sources */,
+				E2638F8528C207B500E9D8C5 /* grid_system_data2.swift in Sources */,
+				E2638F9B28C207B500E9D8C5 /* advection_solvers_render.swift in Sources */,
+				E2638F8028C207B500E9D8C5 /* physics_helpers.metal in Sources */,
+				E263906028C207B600E9D8C5 /* grid_fractional_boundary_condition_solver3.swift in Sources */,
+				E26390CA28C207B700E9D8C5 /* level_set_utils.swift in Sources */,
+				E2638F6928C207B500E9D8C5 /* array_utils.metal in Sources */,
+				E2638FE228C207B600E9D8C5 /* grid_forward_euler_diffusion_solver2.metal in Sources */,
+				E263907028C207B600E9D8C5 /* array_samplers2.metal in Sources */,
+				E2638F8E28C207B500E9D8C5 /* kdtree.swift in Sources */,
+				E26390A228C207B600E9D8C5 /* point_shader.metal in Sources */,
+				E263908428C207B600E9D8C5 /* point_particle_emitter2.swift in Sources */,
+				E263901728C207B600E9D8C5 /* scalar_grid3.swift in Sources */,
+				E2638F7828C207B500E9D8C5 /* grid_fractional_boundary_condition_solver2.swift in Sources */,
+				E263902B28C207B600E9D8C5 /* spherical_points_to_implicit2.swift in Sources */,
+				E263905628C207B600E9D8C5 /* animation_render.swift in Sources */,
+				E263903A28C207B600E9D8C5 /* point_neighbor_searcher3.swift in Sources */,
+				E2638FBD28C207B500E9D8C5 /* point_hash_grid_searcher3.swift in Sources */,
+				E263906528C207B600E9D8C5 /* eno_level_set_solver2.swift in Sources */,
+				E263907628C207B600E9D8C5 /* grid_emitter3.swift in Sources */,
+				E26390A928C207B700E9D8C5 /* heap.swift in Sources */,
+				E2638FBA28C207B500E9D8C5 /* point_simple_list_searcher3.swift in Sources */,
+				E26390A628C207B700E9D8C5 /* triangle_point_generator.swift in Sources */,
+				E26390B928C207B700E9D8C5 /* array_accessor3.swift in Sources */,
+				E26390AF28C207B700E9D8C5 /* constants.metal in Sources */,
+				E263903D28C207B600E9D8C5 /* apic_solver2.metal in Sources */,
+				E2638FEB28C207B600E9D8C5 /* fdm_linear_system3.metal in Sources */,
+				E26390A428C207B700E9D8C5 /* bounding_box3.swift in Sources */,
+				E2638FC328C207B500E9D8C5 /* sph_points_to_implicit2_render.swift in Sources */,
+				E263903E28C207B600E9D8C5 /* hello_fluid_sim.swift in Sources */,
+				E263907F28C207B600E9D8C5 /* collider_set2.swift in Sources */,
+				E263906928C207B600E9D8C5 /* cell_centered_vector_grid2.swift in Sources */,
+				E2638FFF28C207B600E9D8C5 /* constant_scalar_field2_impl.metal in Sources */,
+				E263909228C207B600E9D8C5 /* sphere2.swift in Sources */,
+				E2638F8628C207B500E9D8C5 /* sph_kernels_render.swift in Sources */,
+				E263901328C207B600E9D8C5 /* particle_system_data2.swift in Sources */,
+				E2638F6628C207B500E9D8C5 /* sph_kernels3.swift in Sources */,
+				E2638F7128C207B500E9D8C5 /* size2.swift in Sources */,
+				E2638FDF28C207B600E9D8C5 /* size3.swift in Sources */,
+				E263902628C207B600E9D8C5 /* sph_kernels3_impl.metal in Sources */,
+				E26390D128C207B700E9D8C5 /* matrix2x2.swift in Sources */,
+				E263906B28C207B600E9D8C5 /* constants.swift in Sources */,
+				E263906228C207B600E9D8C5 /* constant_vector_field2_impl.metal in Sources */,
+				E2638FF028C207B600E9D8C5 /* marching_squares_table.swift in Sources */,
+				E2638F8428C207B500E9D8C5 /* scalar_field2.swift in Sources */,
+				E263902128C207B600E9D8C5 /* color_utils.swift in Sources */,
+				E263907128C207B600E9D8C5 /* nearest_neighbor_query_engine3.swift in Sources */,
+				E263904328C207B600E9D8C5 /* sph_system_data3.swift in Sources */,
+				E2638F7D28C207B500E9D8C5 /* pic_solver3.metal in Sources */,
+				E263907728C207B600E9D8C5 /* constant_vector_field3.metal in Sources */,
+				E2638F9A28C207B500E9D8C5 /* grid_fractional_single_phase_pressure_solver2.swift in Sources */,
+				E263905528C207B600E9D8C5 /* flip_solver3.swift in Sources */,
+				E263900028C207B600E9D8C5 /* grid_single_phase_pressure_solver2.swift in Sources */,
+				E26390D028C207B700E9D8C5 /* point_neighbor_searcher2.swift in Sources */,
+				E263906728C207B600E9D8C5 /* pic_solver3.swift in Sources */,
+				E263905B28C207B600E9D8C5 /* grid2.swift in Sources */,
+				E2638FFC28C207B600E9D8C5 /* ray2.swift in Sources */,
+				E263908728C207B600E9D8C5 /* field.swift in Sources */,
+				E2638F6E28C207B500E9D8C5 /* upwind_level_set_solver2.swift in Sources */,
+				E2638FFA28C207B600E9D8C5 /* Renderer.swift in Sources */,
+				E2638FBF28C207B500E9D8C5 /* particle_system_solver2_render.swift in Sources */,
+				E2638FC528C207B500E9D8C5 /* array_accessor3.metal in Sources */,
+				E26390D628C207B700E9D8C5 /* marching_cubes_render.swift in Sources */,
+				E2638F9D28C207B500E9D8C5 /* fdm_jacobi_solver3.swift in Sources */,
+				E2638F9E28C207B500E9D8C5 /* stack.swift in Sources */,
+				E2638F9828C207B500E9D8C5 /* sph_solver2.metal in Sources */,
+				E263909928C207B600E9D8C5 /* apic_solver3_render.swift in Sources */,
+				E263903528C207B600E9D8C5 /* cell_centered_vector_grid3_impl.metal in Sources */,
+				E263901A28C207B600E9D8C5 /* zhu_bridson_points_to_implicit2_render.swift in Sources */,
+				E2638F7028C207B500E9D8C5 /* array_accessor1.metal in Sources */,
+				E263904528C207B600E9D8C5 /* array_samplers3.metal in Sources */,
+				E263907C28C207B600E9D8C5 /* grid_forward_euler_diffusion_solver3.swift in Sources */,
+				E263909E28C207B600E9D8C5 /* line_shader.metal in Sources */,
+				E263900D28C207B600E9D8C5 /* pic_solver2.metal in Sources */,
+				E263901F28C207B600E9D8C5 /* constant_vector_field3_impl.metal in Sources */,
+				E263902528C207B600E9D8C5 /* point_particle_emitter3.swift in Sources */,
+				E2638FFB28C207B600E9D8C5 /* vector_field3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E26062A928C395EB000DDBEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E26062AA28C395EB000DDBEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E2638DE328C2071500E9D8C5 /* Debug */ = {
